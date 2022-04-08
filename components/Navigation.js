@@ -2,13 +2,14 @@ import Link from 'next/link'
 import React from 'react'
 import ThemeSwitch from '../components/ThemeSwitch'
 import Image from 'next/image'
-import profile from '../public/profile.png'
+import profile from '../public/images/profile.png'
 
 const Navigation = () => {
   return (
-    <div className="sticky top-0 z-20 bg-white py-2 dark:bg-black md:mb-6 md:py-6">
+    /* <div className="sticky top-0 z-20 bg-white py-2 dark:bg-black md:mb-6 md:py-6 mr-auto bg-[#ccd2e7] bg-gradient-to-r from-sky-100 to-blue-200"> */
+    <div className="sticky top-0 z-20 bg-white py-2 dark:bg-black md:mb-6 md:py-6 mr-auto bg-[#ccd2e7]">
       <div className="container mx-auto flex items-center justify-between px-4 lg:max-w-4xl">
-        <Link href="/">
+        <Link href="/" passHref>
           <a
             className={
               'font-medium uppercase tracking-wider transition-colors hover:text-yellow-500 dark:text-white'
@@ -18,7 +19,7 @@ const Navigation = () => {
               src={profile}
               alt="Nadilson José Rodrigues Teixeira"
               priority={true}
-              className="rounded-full transition-colors hover:image-yellow-500"
+              className="hover:image-yellow-500 rounded-full transition-colors"
               width={50}
               height={50}
               placeholder="blur"
@@ -27,38 +28,44 @@ const Navigation = () => {
           </a>
         </Link>
 
-        <div className="dark:border-white-300 mb-2 border-t-2 border-gray-300 pb-8"></div>
-        <div className="flex flex-col items-center justify-between lg:flex-row">
+        <div className="dark:border-white-300 mb-2 border-t-2 border-gray-300 pb-8 ml-auto"></div>
+        <div className="flex flex-col justify-between lg:flex-row">
           <div className="flex flex-wrap space-x-2 pt-2 font-medium sm:space-x-4 lg:pt-0">
-            <a
-              href="cv"
-              className={'transition-colors hover:text-yellow-500'}
-              rel="noreferrer"
-            >
-              CV
-            </a>
-            <a
-              href="/projetos"
-              className={'transition-colors hover:text-yellow-500'}
-              rel="noreferrer"
-            >
-              Projetos
-            </a>
-            <a
-              href="/contatos"
-              className={'transition-colors hover:text-yellow-500'}
-              rel="noreferrer"
-            >
-              Contatos
-            </a>
-            <a
-              href="https://nadblog.vercel.app/"
-              className={'transition-colors hover:text-yellow-500'}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Blog
-            </a>
+            <Link href="/cv" passHref>
+              <a
+                className={'transition-colors hover:text-yellow-500'}
+                rel="noreferrer"
+              >
+                CV
+              </a>
+            </Link>
+
+            <Link href="/projetos" passHref>
+              <a
+                className={'transition-colors hover:text-yellow-500'}
+                rel="noreferrer"
+              >
+                Projetos
+              </a>
+            </Link>
+
+            <Link href="/contatos" passHref>
+              <a
+                className={'transition-colors hover:text-yellow-500'}
+                rel="noreferrer"
+              >
+                Contatos
+              </a>
+            </Link>
+
+            <Link href="/blog" passHref>
+              <a
+                className={'transition-colors hover:text-yellow-500'}
+                rel="noreferrer"
+              >
+                Blog
+              </a>
+            </Link>
           </div>
         </div>
         <ThemeSwitch />
