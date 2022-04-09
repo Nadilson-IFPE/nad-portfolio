@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import About from "../components/About";
+import { motion } from 'framer-motion'
+import loadTransitions from '../ANIM/loadTransitions'
 
 const Home: NextPage = () => {
   return (
@@ -17,4 +19,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default loadTransitions(Home);

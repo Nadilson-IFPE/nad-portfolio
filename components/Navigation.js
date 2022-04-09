@@ -24,7 +24,7 @@ const Navigation = () => {
               height={50}
               placeholder="blur"
             />
-            <p className="transition-colors hover:text-yellow-500">Início</p>
+            <p className="transition-colors hover:text-yellow-500"><strong>Início</strong></p>
           </a>
         </Link>
 
@@ -36,7 +36,7 @@ const Navigation = () => {
                 className={'transition-colors hover:text-yellow-500'}
                 rel="noreferrer"
               >
-                CV
+                <strong>CV</strong>
               </a>
             </Link>
 
@@ -45,7 +45,7 @@ const Navigation = () => {
                 className={'transition-colors hover:text-yellow-500'}
                 rel="noreferrer"
               >
-                Projetos
+                <strong>Projetos</strong>
               </a>
             </Link>
 
@@ -54,7 +54,7 @@ const Navigation = () => {
                 className={'transition-colors hover:text-yellow-500'}
                 rel="noreferrer"
               >
-                Contatos
+                <strong>Contatos</strong>
               </a>
             </Link>
 
@@ -63,7 +63,7 @@ const Navigation = () => {
                 className={'transition-colors hover:text-yellow-500'}
                 rel="noreferrer"
               >
-                Blog
+                <strong>Blog</strong>
               </a>
             </Link>
           </div>
