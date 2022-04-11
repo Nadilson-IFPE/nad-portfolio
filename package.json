@@ -8,6 +8,8 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.2",
     "framer-motion": "^6.2.9",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.14",
     "next": "latest",
     "next-themes": "^0.1.1",
     "react": "^17.0.2",

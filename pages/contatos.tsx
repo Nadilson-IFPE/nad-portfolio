@@ -42,19 +42,17 @@ function Contatos() {
             </p>
           </div> */}
 
-            <br />
-
             <div className="rounded-lg bg-white p-10 shadow-xl dark:text-white">
               <Image
                 src={profile}
                 alt="Nadilson José Rodrigues Teixeira"
                 priority={true}
-                className={'mx-auto h-40 rounded-full p-4'}
-                width={200}
-                height={200}
+                className={'mx-auto h-40 rounded p-4'}
+                width={250}
+                height={250}
                 placeholder="blur"
               />
-              <header className="py-4 px-4 text-center text-2xl font-extrabold dark:text-black">
+              <header className="py-4 px-4 text-center text-2xl font-extrabold dark:text-black underline decoration-sky-400 decoration-wavy underline-offset-8">
                 Nadilson
               </header>
               <div>
@@ -67,26 +65,24 @@ function Contatos() {
                 <br />
 
                 <p className="mb-4 text-center font-semibold text-gray-500">
-                  Telefone: <br />{' '}
+                  Telefone: <br />
                   <a
                     href="tel:+5581986723962"
-                    className="text-center font-semibold text-gray-500 hover:text-yellow-500"
+                    className="text-center font-semibold text-gray-500 hover:text-yellow-500 underline decoration-sky-400 decoration-wavy underline-offset-8"
                   >
                     +55 81 9 8672-3962
                   </a>
                 </p>
 
                 <p className="mb-4 text-center font-semibold text-gray-500">
-                  E-mail: <br />{' '}
+                  E-mail: <br />
                   <a
                     href="mailto:nadilson@protonmail.com"
-                    className="text-center font-semibold text-gray-500 hover:text-yellow-500"
+                    className="text-center font-semibold text-gray-500 hover:text-yellow-500 underline decoration-sky-400 decoration-wavy underline-offset-8"
                   >
                     nadilson@protonmail.com
                   </a>
                 </p>
-
-                <br />
 
                 <div className="grid grid-cols-3 place-items-center gap-3">
                   <Link

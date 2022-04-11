@@ -59,12 +59,11 @@ const About = () => {
               src={profile}
               alt="Nadilson José Rodrigues Teixeira"
               priority={true}
-              className="rounded-full"
-              width={200}
-              height={200}
+              width={250}
+              height={250}
               placeholder="blur"
             />
-            <div className="mt-6 flex justify-center">
+            <div className="mt-1 flex justify-center">
               <div className="flex space-x-4 font-medium text-gray-800 dark:text-white sm:block md:flex lg:flex">
                 <Link
                   href="https://www.linkedin.com/in/nadilson-teixeira/"
