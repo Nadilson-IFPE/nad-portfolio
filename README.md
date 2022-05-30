@@ -10,7 +10,7 @@ Este site não é meu primeiro trabalho sério com Next.js, mas é o primeiro a 
 
 <h3>Você pode acessar a versão atual neste link:</h3>
 
-https://nadportfolio.vercel.app/{:target="_blank" rel="noopener"}
+https://nadportfolio.vercel.app/
 
 <h6>Nota: o site está pronto, mas vai mudar muito conforme a experiência de desenvolvimento for aumentando.</h6>
 
