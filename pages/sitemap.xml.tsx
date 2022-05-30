@@ -1,10 +1,12 @@
 import * as fs from 'fs'
+import { GetServerSideProps } from 'next'
+import React from 'react'
 
-const Sitemap = () => {
+const Sitemap: React.FC = () => {
   return null
 }
 
-export const getServerSideProps = async ({ res }: any) => {
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const BASE_URL = {
     development: 'http://localhost:3000',
     production: 'https://nadportfolio.vercel.app',
@@ -25,6 +27,7 @@ export const getServerSideProps = async ({ res }: any) => {
       return ![
         '_app.tsx',
         '.env.local',
+        '.env',
         '.eslintrc.json',
         '.git',
         '.gitignore',
@@ -40,6 +43,8 @@ export const getServerSideProps = async ({ res }: any) => {
         'package.json',
         'postcss.config.js',
         'prettier.config.js',
+        '__next_launcher',
+        '__vc_bridge.js',
         'public',
         'README.md',
         'styles',
