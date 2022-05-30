@@ -1,22 +1,21 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
-import About from "../components/About";
-import { motion } from 'framer-motion'
-import loadTransitions from '../ANIM/loadTransitions'
+import type { NextPage } from 'next'
+import About from '../components/About'
+import FavIcon from '../components/FavIcon'
 
 const Home: NextPage = () => {
   return (
     <div className="space-y-14 lg:space-y-24">
       <Head>
-        <title>Portfólio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Site pessoal de Nadilson J. R. Teixeira - Início</title>
+        <FavIcon />
       </Head>
 
-      <main className="max-w-4xl mx-auto mt-16 antialiased">
-        <About/>
+      <main className="mx-auto mt-16 flex min-h-screen max-w-4xl flex-col antialiased">
+        <About />
       </main>
     </div>
   )
 }
 
-export default loadTransitions(Home);
+export default Home

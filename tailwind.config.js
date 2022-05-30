@@ -5,9 +5,20 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+    extend: {
+      keyframes: {
+        wiggle: {
+          '0%': { transform: 'rotate(-5deg)' },
+          '50%': { transform: 'rotate(5deg)' },
+          '100%': { transform: 'rotate(-5deg)' },
+        },
+      },
+      animation: {
+        'spin': 'spin 3s linear infinite',
+        'wiggle': 'wiggle 2s linear infinite'
+      },
+    },
+},
+  plugins: [require('@tailwindcss/typography', '@tailwindcss/aspect-ratio')],
+    variants: { },
 }

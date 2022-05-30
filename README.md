@@ -10,9 +10,9 @@ Este site não é meu primeiro trabalho sério com Next.js, mas é o primeiro a 
 
 <h3>Você pode acessar a versão atual neste link:</h3>
 
-https://nadportfolio.vercel.app/
+https://nadportfolio.vercel.app/{:target="_blank" rel="noopener"}
 
-<h6>Nota: o site ainda está em desenvolvimento, então vai mudar muito até a conclusão.</h6>
+<h6>Nota: o site está pronto, mas vai mudar muito conforme a experiência de desenvolvimento for aumentando.</h6>
 
 <h3>Como instalar e rodar o código em seu computador</h3>
 
@@ -40,16 +40,13 @@ localhost:3000
 
 ![](https://visitor-badge.laobi.icu/badge?page_id=Nadilson-IFPE.Nadilson)
 
-
 <h3>Quantidade de seguidores:</h3>
 
 [![Github](https://img.shields.io/github/followers/Nadilson-IFPE?label=Follow&style=social)](hhttps://github.com/Nadilson-IFPE)
 
-
 <h3>Linguagens mais utilizadas no meu repositório:</h3>
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Nadilson-IFPE&theme=tokyonight)
-
 
 <h3>Encontre-me no LinkedIn:</h3>
 

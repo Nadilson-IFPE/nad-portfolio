@@ -2,23 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+/*body {
+  background: #e3e6f0;
+} */
 
-.slide-in {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: #ccd2e7;
-    transform-origin: left;
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* .esconder {
+  opacity: 0;
+  height: 0;
+  transition: opacity 1.5s height 1.5s;
+}
+
+.mostrar {
+  opacity: 100;
+  transition: opacity 1s;
+} */
+
+.mybg {
+  background-image: url('/images/custombg.png');
+}
+
+@keyframes details-show {
+  from {
+    opacity: 0;
+    transform: var(--details-translate, translateY(-0.5em));
+  }
+}
+
+details[open] > *:not(summary) {
+  animation: details-show 150ms ease-in-out;
+}
+
+.blog_post-body ul,
+ol {
+  font-size: 110%;
+  line-height: 2.3;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.blog_post-body pre {
+  background: #496ee6;
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 2.3;
+}
+
+@media (max-width: 600px) {
+  .blog_posts {
+    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
-  .slide-out {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: #ccd2e7;
-    transform-origin: right;
+  .max-w-md {
+    max-width: 100vw !important;
   }
+}

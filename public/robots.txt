@@ -1,0 +1,15 @@
+Sitemap: https://nadportfolio.vercel.app/sitemap
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*
+
+
+
+Sitemap: http://localhost:3000/sitemap
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*
