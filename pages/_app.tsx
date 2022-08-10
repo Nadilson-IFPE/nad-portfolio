@@ -9,10 +9,27 @@ import { ThemeProvider } from 'next-themes'
 import { AnimatePresence } from 'framer-motion'
 import { DefaultSeo } from 'next-seo'
 import FavIcon from './../components/FavIcon'
+import Script from 'next/script'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
+
       <Head>
         <title>Site pessoal de Nadilson J. R. Teixeira</title>
         <FavIcon />
