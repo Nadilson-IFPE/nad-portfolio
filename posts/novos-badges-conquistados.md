@@ -4,7 +4,7 @@ autor_img: '/images/posts/me_myself.jpg'
 capa: '/images/posts/iniciativa_devops_badges.png'
 capa_posts_list: '/images/posts/iniciativa_devops_badges_posts_lists.png'
 data: '06/08/2022'
-resumo: 'Conquistei 5 badges ao entregar os desafios de uma treinamento online Iniciativa DevOps'
+resumo: 'Conquistei 5 badges ao entregar os desafios de uma treinamento online, o Iniciativa DevOps.'
 titulo: 'Novos badges conquistados'
 ---
 
@@ -25,6 +25,6 @@ Durante o evento, foram propostos desafios ao final de cada aula. Cada desafio e
 
 **Mas, o que é DevOps?**
 
-Segundo na Amazon Web Services (AWS), DevOps "é a combinação de filosofias culturais, práticas e ferramentas que aumentam a capacidade de uma empresa de distribuir aplicativos e serviços em alta velocidade, otimizando e aperfeiçoando produtos em um ritmo mais rápido do que o das empresas que usam processos tradicionais de desenvolvimento de software e gerenciamento de infraestrutura". Essa velocidade, diz, "permite que as empresas atendam melhor aos seus clientes e consigam competir de modo mais eficaz no mercado". Há maiores e mais detalhadas informações sobre o assunto no seguinte endereço: [Definição do modelo do DevOps](https://aws.amazon.com/pt/devops/what-is-devops/).
+Segundo a Amazon Web Services (AWS), DevOps "é a combinação de filosofias culturais, práticas e ferramentas que aumentam a capacidade de uma empresa de distribuir aplicativos e serviços em alta velocidade, otimizando e aperfeiçoando produtos em um ritmo mais rápido do que o das empresas que usam processos tradicionais de desenvolvimento de software e gerenciamento de infraestrutura". Essa velocidade, diz, "permite que as empresas atendam melhor aos seus clientes e consigam competir de modo mais eficaz no mercado". Há maiores e mais detalhadas informações sobre o assunto no seguinte endereço: [Definição do modelo do DevOps](https://aws.amazon.com/pt/devops/what-is-devops/).
 
-Como já venho falando, muitos eventos online gratuitos estão ocorrendo mensalmente para a promoção de cursos profissionalizantes ou de formação de desenvolvedores Full Stack/DevOps. Também repito que são uma boa oportunidade para ver quais as tecnologias que as empresas estão esperando conhecimento de seus candidatos no momento, além serem uma grande oportunidade para fazer networking e ampliar, claro, os próprios conhecimentos. Sempre ocorre de oferecerem descontos e outras vantagens para os interessados. Por isso, fique de olho nesses eventos e cursos do momento para não ficar para trás no mercado de trabalho.
+Como já venho falando, muitos eventos online gratuitos estão ocorrendo mensalmente para a promoção de cursos profissionalizantes ou de formação de desenvolvedores Full Stack/DevOps. Também repito que são uma boa oportunidade para ver quais as tecnologias que as empresas estão esperando conhecimento de seus candidatos no momento, além de serem uma grande oportunidade para fazer networking e ampliar, claro, os próprios conhecimentos. Sempre ocorre de oferecerem descontos e outras vantagens para os interessados. Por isso, fique de olho nesses eventos e cursos do momento para não ficar para trás no mercado de trabalho.
