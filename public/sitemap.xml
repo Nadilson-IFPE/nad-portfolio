@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        
+              <url>
+                <loc>https://nadportfolio.vercel.app/blog</loc>
+                <lastmod>2022-08-10T03:17:40.346Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>
+            
+              <url>
+                <loc>https://nadportfolio.vercel.app/contatos</loc>
+                <lastmod>2022-08-10T03:17:40.346Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>
+            
+              <url>
+                <loc>https://nadportfolio.vercel.app/cv</loc>
+                <lastmod>2022-08-10T03:17:40.346Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>
+            
+              <url>
+                <loc>https://nadportfolio.vercel.app/projetos</loc>
+                <lastmod>2022-08-10T03:17:40.346Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>
+            
+              <url>
+                <loc>https://nadportfolio.vercel.app/blog/avaliacao-e-elogios-ao-vivo</loc>
+                <lastmod>2022-08-10T03:17:40.346Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>
+            
+              <url>
+                <loc>https://nadportfolio.vercel.app/blog/novos-badges-conquistados</loc>
+                <lastmod>2022-08-10T03:17:40.346Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>
+            
+      </urlset>

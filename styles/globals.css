@@ -53,6 +53,18 @@ ol {
   line-height: 2.3;
 }
 
+.mobile-menu {
+  /* background-color: rgba(46, 68, 80, 0.445); */
+  /* background-color: #a3add3; */
+  color: black;
+}
+
+.mobile-menu a:hover {
+  display: block;
+  /*  background-color: #a3add3; */
+  color: #ffb800;
+}
+
 @media (max-width: 600px) {
   .blog_posts {
     grid-template-columns: 1fr;

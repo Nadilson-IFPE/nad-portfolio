@@ -177,7 +177,7 @@ const About = () => {
             <div className="mb-10 flex-shrink-0 lg:mt-2 lg:px-2">
               <div className="mt-1 flex justify-center">
                 <div className="flex space-x-4 font-medium text-gray-800 dark:text-white sm:block md:flex lg:flex">
-                  <Link href="https://www.instagram.com/nadilson-dev/" passHref>
+                  <Link href="https://www.instagram.com/nadilsondev/" passHref>
                     <a
                       className={
                         'font-medium uppercase tracking-wider transition-colors hover:text-yellow-500 dark:text-white'

@@ -3,6 +3,7 @@ import React from 'react'
 import ThemeSwitch from './ThemeSwitch'
 import Image from 'next/image'
 import profile from '../public/images/profile.png'
+import MobileNavigation from './MobileNavigation'
 
 // const getLastItem = (myPage: string) =>
 //   myPage.substring(myPage.lastIndexOf('/') + 1)
@@ -43,13 +44,15 @@ const Navigation = () => {
 
   return (
     <>
-      <div className="sticky top-0 z-20 mr-auto content-center items-center bg-[#b9c1e0] p-2 text-center dark:bg-black">
-        <div className="dark:bg-slate-20 sticky flex content-center items-center justify-between px-4 text-center">
+      <div className="sticky top-0 z-50 mr-auto content-center items-center justify-between bg-[#b9c1e0] p-2 text-center dark:bg-black">
+        <div className="sticky flex content-center items-center justify-between px-4 text-center">
+          {/* Menu para dispositivos móveis */}
+          <MobileNavigation />
+
+          {/* Menu  para PCs e dispositivos com tela grande*/}
           <Link href="/" passHref scroll={false}>
             <a
-              className={
-                'font-medium uppercase tracking-wider transition-colors hover:text-yellow-500'
-              }
+              className="invisible font-medium uppercase tracking-wider transition-colors hover:text-yellow-500 md:visible lg:visible xl:visible 2xl:visible"
               onClick={(e) =>
                 handleClickOnLink(
                   e,
@@ -76,10 +79,10 @@ const Navigation = () => {
 
           <div className="dark:border-white-300 mb-2 ml-auto border-t-2 border-gray-300 pb-8"></div>
           <div className="flex flex-col justify-between lg:flex-row">
-            <div className="flex flex-wrap space-x-2 pt-2 font-medium lg:pt-0">
+            <div className="hidden flex-wrap space-x-2 pt-2 font-medium sm:flex md:visible lg:visible lg:pt-0 xl:visible 2xl:visible">
               <Link href="/cv" passHref>
                 <a
-                  className={'transition-colors hover:text-yellow-500'}
+                  className="transition-colors hover:text-yellow-500"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -94,9 +97,24 @@ const Navigation = () => {
                 </a>
               </Link>
 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                className="current-fill h-6 w-6 text-gray-400"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1"
+                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                />
+              </svg>
+
               <Link href="/projetos" passHref>
                 <a
-                  className={'transition-colors hover:text-yellow-500'}
+                  className="transition-colors hover:text-yellow-500"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -111,9 +129,24 @@ const Navigation = () => {
                 </a>
               </Link>
 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                className="current-fill h-6 w-6 text-gray-400"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1"
+                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                />
+              </svg>
+
               <Link href="/contatos" passHref>
                 <a
-                  className={'transition-colors hover:text-yellow-500'}
+                  className="transition-colors hover:text-yellow-500"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -128,9 +161,24 @@ const Navigation = () => {
                 </a>
               </Link>
 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                className="current-fill h-6 w-6 text-gray-400"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1"
+                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                />
+              </svg>
+
               <Link href="/blog" passHref>
                 <a
-                  className={'transition-colors hover:text-yellow-500'}
+                  className="transition-colors hover:text-yellow-500"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -144,6 +192,21 @@ const Navigation = () => {
                   <strong>Blog</strong>
                 </a>
               </Link>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                className="current-fill h-6 w-6 text-gray-400"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1"
+                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                />
+              </svg>
             </div>
           </div>
           <ThemeSwitch />

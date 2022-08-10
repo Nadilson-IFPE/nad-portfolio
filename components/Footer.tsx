@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="dark:border-white-300 mb-2 border-t-2 border-gray-300 pb-8" />
         <div className="flex flex-col items-center justify-between lg:flex-row">
           <div className="flex flex-1 flex-wrap space-x-2 pt-2 font-medium sm:space-x-4 lg:pt-0" />
-          <p className="text-right">
+          <p className="mt-auto text-right">
             &copy; {new Date().getFullYear()} - Portfólio construído com{' '}
             <a
               href="https://nextjs.org/"

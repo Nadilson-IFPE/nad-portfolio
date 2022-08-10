@@ -21,7 +21,6 @@ const PostPage: NextPage<Post> = ({
           <title>
             Site pessoal de Nadilson J. R. Teixeira - Blog: {titulo}
           </title>
-          <FavIcon />
         </Head>
 
         <motion.div

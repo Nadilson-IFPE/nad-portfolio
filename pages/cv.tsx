@@ -7,7 +7,14 @@ import badge03 from '../public/images/badge03.png'
 import badge04 from '../public/images/badge04.png'
 import badge05 from '../public/images/badge05.png'
 import badge06 from '../public/images/badge06.png'
-import certprof from '../public/images/certprof.png'
+import badge07 from '../public/images/badge07.png'
+import badge08 from '../public/images/badge08.png'
+import badge09 from '../public/images/badge09.png'
+import badge10 from '../public/images/badge10.png'
+import badge11 from '../public/images/badge11.png'
+import badge12 from '../public/images/badge12.png'
+import badge13 from '../public/images/badge13.png'
+import certiprof from '../public/images/certiprof.png'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { isMobile } from 'react-device-detect'
@@ -357,7 +364,7 @@ const CV: NextPage = () => {
                     <br />
                     CertiProf ID: 11565972566844
                     <Image
-                      src={certprof}
+                      src={certiprof}
                       alt="Scrum Foundation Professional Certificate (SFPC)"
                       priority={true}
                       width={600}
@@ -384,192 +391,416 @@ const CV: NextPage = () => {
                       <div className="ml-2 origin-left border-8 border-transparent border-l-gray-600 transition-transform group-open:rotate-90" />
                     </div>
                   </summary>
-                  <div className="mb-4 grid grid-cols-3 place-items-center gap-3 rounded-b-xl bg-[#e7eaf7] p-4">
-                    <Link
-                      href="https://api.badgr.io/public/assertions/v41PgtguSlC57_0CPuXChA?identity__email=nadilson.ads%40gmail.com"
-                      passHref
-                    >
-                      <a
-                        className={
-                          'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
-                        }
-                        target="_blank"
-                        rel="noreferrer"
+                  <div className="rounded-b-xl bg-[#e7eaf7]">
+                    <p className="mb-4 bg-[#e7eaf7] p-4 text-justify">
+                      Estou sempre estudando, seja através de cursos, livros e
+                      treinamentos online. Alguns badges a seguir são minhas
+                      conquistas mais recentes:
+                    </p>
+                    <div className="mb-4 grid grid-cols-3 place-items-center gap-3 rounded-b-xl bg-[#e7eaf7] p-4">
+                      <Link
+                        href="https://api.badgr.io/public/assertions/v41PgtguSlC57_0CPuXChA"
+                        passHref
                       >
-                        <Image
-                          src={badge01}
-                          alt="Containers e Docker"
-                          priority={true}
-                          width={200}
-                          height={200}
-                          placeholder="blur"
-                        />
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge01}
+                            alt="Containers e Docker"
+                            priority={true}
+                            width={200}
+                            height={200}
+                            placeholder="blur"
+                          />
 
-                        <div className="flex justify-center">
-                          <button
-                            className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
-                            onClick={() => {}}
-                          >
-                            Saiba mais
-                          </button>
-                        </div>
-                      </a>
-                    </Link>
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
 
-                    <Link
-                      href="https://api.badgr.io/public/assertions/6lo8JyZRSnSAbJO_rkvJbw?identity__email=nadilson.ads%40gmail.com"
-                      passHref
-                    >
-                      <a
-                        className={
-                          'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
-                        }
-                        target="_blank"
-                        rel="noreferrer"
+                      <Link
+                        href="https://api.badgr.io/public/assertions/6lo8JyZRSnSAbJO_rkvJbw"
+                        passHref
                       >
-                        <Image
-                          src={badge02}
-                          alt="Deploy no Kubernetes"
-                          priority={true}
-                          width={200}
-                          height={200}
-                          placeholder="blur"
-                        />
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge02}
+                            alt="Deploy no Kubernetes"
+                            priority={true}
+                            width={200}
+                            height={200}
+                            placeholder="blur"
+                          />
 
-                        <div className="flex justify-center">
-                          <button
-                            className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
-                            onClick={() => {}}
-                          >
-                            Saiba mais
-                          </button>
-                        </div>
-                      </a>
-                    </Link>
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
 
-                    <Link
-                      href="https://api.badgr.io/public/assertions/Cc0WsvzzSX2C_g0TrZcKAg?identity__email=nadilson.ads%40gmail.com"
-                      passHref
-                    >
-                      <a
-                        className={
-                          'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
-                        }
-                        target="_blank"
-                        rel="noreferrer"
+                      <Link
+                        href="https://api.badgr.io/public/assertions/Cc0WsvzzSX2C_g0TrZcKAg"
+                        passHref
                       >
-                        <Image
-                          src={badge03}
-                          alt="Pipelines CI/CD"
-                          priority={true}
-                          width={200}
-                          height={200}
-                          placeholder="blur"
-                        />
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge03}
+                            alt="Pipelines CI/CD"
+                            priority={true}
+                            width={200}
+                            height={200}
+                            placeholder="blur"
+                          />
 
-                        <div className="flex justify-center">
-                          <button
-                            className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
-                            onClick={() => {}}
-                          >
-                            Saiba mais
-                          </button>
-                        </div>
-                      </a>
-                    </Link>
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
 
-                    <Link
-                      href="https://api.badgr.io/public/assertions/PPvlPo7vQQyysdT_Z2nFHg?identity__email=nadilson.ads%40gmail.com"
-                      passHref
-                    >
-                      <a
-                        className={
-                          'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
-                        }
-                        target="_blank"
-                        rel="noreferrer"
+                      <Link
+                        href="https://api.badgr.io/public/assertions/PPvlPo7vQQyysdT_Z2nFHg"
+                        passHref
                       >
-                        <Image
-                          src={badge04}
-                          alt="Explorador - Containers e Docker"
-                          priority={true}
-                          width={200}
-                          height={200}
-                          placeholder="blur"
-                        />
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge04}
+                            alt="Explorador - Containers e Docker"
+                            priority={true}
+                            width={200}
+                            height={200}
+                            placeholder="blur"
+                          />
 
-                        <div className="flex justify-center">
-                          <button
-                            className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
-                            onClick={() => {}}
-                          >
-                            Saiba mais
-                          </button>
-                        </div>
-                      </a>
-                    </Link>
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
 
-                    <Link
-                      href="https://api.badgr.io/public/assertions/dnjH7Kr2Qw2Tp97oneSXsg?identity__email=nadilson.ads%40gmail.com"
-                      passHref
-                    >
-                      <a
-                        className={
-                          'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
-                        }
-                        target="_blank"
-                        rel="noreferrer"
+                      <Link
+                        href="https://api.badgr.io/public/assertions/dnjH7Kr2Qw2Tp97oneSXsg"
+                        passHref
                       >
-                        <Image
-                          src={badge05}
-                          alt="Desbravador - Deploy no Kubernetes"
-                          priority={true}
-                          width={200}
-                          height={200}
-                          placeholder="blur"
-                        />
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge05}
+                            alt="Desbravador - Deploy no Kubernetes"
+                            priority={true}
+                            width={200}
+                            height={200}
+                            placeholder="blur"
+                          />
 
-                        <div className="flex justify-center">
-                          <button
-                            className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
-                            onClick={() => {}}
-                          >
-                            Saiba mais
-                          </button>
-                        </div>
-                      </a>
-                    </Link>
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
 
-                    <Link
-                      href="https://api.badgr.io/public/assertions/L7ZYNG9wTaKmxZ4mbtbi4w?identity__email=nadilson.ads%40gmail.com"
-                      passHref
-                    >
-                      <a
-                        className={
-                          'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
-                        }
-                        target="_blank"
-                        rel="noreferrer"
+                      <Link
+                        href="https://api.badgr.io/public/assertions/L7ZYNG9wTaKmxZ4mbtbi4w"
+                        passHref
                       >
-                        <Image
-                          src={badge06}
-                          alt="Reactive Spring"
-                          priority={true}
-                          width={200}
-                          height={200}
-                          placeholder="blur"
-                        />
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge06}
+                            alt="Reactive Spring"
+                            priority={true}
+                            width={200}
+                            height={200}
+                            placeholder="blur"
+                          />
 
-                        <div className="flex justify-center">
-                          <button
-                            className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
-                            onClick={() => {}}
-                          >
-                            Saiba mais
-                          </button>
-                        </div>
-                      </a>
-                    </Link>
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
+
+                      <Link
+                        href="https://api.badgr.io/public/assertions/KYfMApz3TFy2oeg8ErxRGA"
+                        passHref
+                      >
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge07}
+                            alt="Scrum Foundation Professional Certificate - SFPC"
+                            priority={true}
+                            width={150}
+                            height={150}
+                            placeholder="blur"
+                          />
+
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
+
+                      <Link
+                        href="https://api.badgr.io/public/assertions/q_mtqixUTYiDPnIwgtUk3g"
+                        passHref
+                      >
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge08}
+                            alt="Certiprof - Lifelong Learning"
+                            priority={true}
+                            width={150}
+                            height={150}
+                            placeholder="blur"
+                          />
+
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
+
+                      <Link
+                        href="https://api.badgr.io/public/assertions/zEjvYeCZQRu3mfsn29F8zQ"
+                        passHref
+                      >
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge09}
+                            alt="Iniciativa DevOps - Docker"
+                            priority={true}
+                            width={450}
+                            height={450}
+                            placeholder="blur"
+                          />
+
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
+
+                      <Link
+                        href="https://api.badgr.io/public/assertions/LR_Z4c1YQS6CWh66fNRVkA"
+                        passHref
+                      >
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge10}
+                            alt="Iniciativa DevOps - Kubernetes"
+                            priority={true}
+                            width={450}
+                            height={450}
+                            placeholder="blur"
+                          />
+
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
+
+                      <Link
+                        href="https://api.badgr.io/public/assertions/4AaoXeo8QbOm_XXZwWmxJg"
+                        passHref
+                      >
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge11}
+                            alt="Iniciativa DevOps - Terrafom"
+                            priority={true}
+                            width={450}
+                            height={450}
+                            placeholder="blur"
+                          />
+
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
+
+                      <Link
+                        href="https://api.badgr.io/public/assertions/hNpWmgL6Roqt3wKGIgH03g"
+                        passHref
+                      >
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge12}
+                            alt="Iniciativa DevOps - CI/CD"
+                            priority={true}
+                            width={450}
+                            height={450}
+                            placeholder="blur"
+                          />
+
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
+
+                      <Link
+                        href="https://api.badgr.io/public/assertions/NqhXCgplQ0ebva0ljFu5wA"
+                        passHref
+                      >
+                        <a
+                          className={
+                            'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
+                          }
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={badge13}
+                            alt="Iniciativa DevOps - Prometheus e Grafana"
+                            priority={true}
+                            width={450}
+                            height={450}
+                            placeholder="blur"
+                          />
+
+                          <div className="flex justify-center">
+                            <button
+                              className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
+                              onClick={() => {}}
+                            >
+                              Saiba mais
+                            </button>
+                          </div>
+                        </a>
+                      </Link>
+                    </div>
                   </div>
                 </details>
 
