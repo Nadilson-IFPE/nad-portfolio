@@ -11,6 +11,12 @@ module.exports = {
   },
   env: {
     BASE_URL: process.env.BASE_URL,
-    PDF_URL: process.env.NEXT_PUBLIC_PDF_URL,
+    NEXT_PUBLIC_CV_PDF_URL: process.env.NEXT_PUBLIC_CV_PDF_URL,
+    NEXT_PUBLIC_CV_ENGLISH_PDF_URL: process.env.NEXT_PUBLIC_CV_ENGLISH_PDF_URL,
+  },
+  i18n: {
+    locales: ['pt', 'en'],
+    defaultLocale: 'pt',
+    localeDetection: false,
   },
 }

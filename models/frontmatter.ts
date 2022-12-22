@@ -4,9 +4,11 @@ interface Frontmatter {
   capa?: string
   capa_posts_list?: string
   data: string
-  resumo: string
   titulo: string
-  video: string
+  titulo_ingles: string
+  resumo: string
+  resumo_ingles: string
+  video?: string
 }
 
 export default Frontmatter

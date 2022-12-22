@@ -4,11 +4,16 @@ import ThemeSwitch from './ThemeSwitch'
 import Image from 'next/image'
 import profile from '../public/images/profile.png'
 import MobileNavigation from './MobileNavigation'
+import LanguageSelector from './LanguageSelector'
+import ThreeDotsDivider from './ThreeDotsDivider'
+import { useLanguages } from '../hooks/useLanguages'
 
 // const getLastItem = (myPage: string) =>
 //   myPage.substring(myPage.lastIndexOf('/') + 1)
 
 const Navigation = () => {
+  const t = useLanguages()
+
   const handleClickOnLink = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
     path: string,
@@ -22,7 +27,7 @@ const Navigation = () => {
       e.preventDefault()
       window.scroll(0, 0)
       targetParagraph!.innerHTML =
-        'Você já está na página <strong>' + page + '</strong>!'
+        `${t.nav_dynamic_error_message}` + '<strong>' + page + '</strong>!'
       targetDiv!.setAttribute(
         'class',
         'w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white'
@@ -58,7 +63,7 @@ const Navigation = () => {
                   e,
                   e.currentTarget.href,
                   'toast-div',
-                  'INÍCIO'
+                  `${t.nav_home}`
                 )
               }
             >
@@ -72,7 +77,7 @@ const Navigation = () => {
                 placeholder="blur"
               />
               <p className="transition-colors">
-                <strong>Início</strong>
+                <strong>{t.nav_home}</strong>
               </p>
             </a>
           </Link>
@@ -89,28 +94,15 @@ const Navigation = () => {
                       e,
                       e.currentTarget.href,
                       'toast-div',
-                      'CV'
+                      `${t.nav_cv}`
                     )
                   }
                 >
-                  <strong>CV</strong>
+                  <strong>{t.nav_cv}</strong>
                 </a>
               </Link>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                className="current-fill h-6 w-6 text-gray-400"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1"
-                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                />
-              </svg>
+              <ThreeDotsDivider />
 
               <Link href="/projetos" passHref>
                 <a
@@ -121,28 +113,15 @@ const Navigation = () => {
                       e,
                       e.currentTarget.href,
                       'toast-div',
-                      'Projetos'
+                      `${t.nav_projects}`
                     )
                   }
                 >
-                  <strong>Projetos</strong>
+                  <strong>{t.nav_projects}</strong>
                 </a>
               </Link>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                className="current-fill h-6 w-6 text-gray-400"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1"
-                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                />
-              </svg>
+              <ThreeDotsDivider />
 
               <Link href="/contatos" passHref>
                 <a
@@ -153,28 +132,15 @@ const Navigation = () => {
                       e,
                       e.currentTarget.href,
                       'toast-div',
-                      'Contatos'
+                      `${t.nav_contact}`
                     )
                   }
                 >
-                  <strong>Contatos</strong>
+                  <strong>{t.nav_contact}</strong>
                 </a>
               </Link>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                className="current-fill h-6 w-6 text-gray-400"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1"
-                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                />
-              </svg>
+              <ThreeDotsDivider />
 
               <Link href="/blog" passHref>
                 <a
@@ -185,31 +151,21 @@ const Navigation = () => {
                       e,
                       e.currentTarget.href,
                       'toast-div',
-                      'Blog'
+                      `${t.nav_blog}`
                     )
                   }
                 >
-                  <strong>Blog</strong>
+                  <strong>{t.nav_blog}</strong>
                 </a>
               </Link>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                className="current-fill h-6 w-6 text-gray-400"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1"
-                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                />
-              </svg>
+              <ThreeDotsDivider />
             </div>
           </div>
+
           <ThemeSwitch />
+
+          <LanguageSelector />
         </div>
       </div>
 
@@ -220,7 +176,7 @@ const Navigation = () => {
         role="alert"
       >
         <p id="paragraph" className="text-center">
-          Você já está na página nesta página!
+          {t.nav_error_message}
         </p>
       </div>
     </>

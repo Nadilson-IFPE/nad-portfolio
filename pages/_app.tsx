@@ -10,8 +10,12 @@ import { AnimatePresence } from 'framer-motion'
 import { DefaultSeo } from 'next-seo'
 import FavIcon from './../components/FavIcon'
 import Script from 'next/script'
+import { useLanguages } from './../hooks/useLanguages'
+import { CookiesProvider } from 'react-cookie'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const t = useLanguages()
+
   return (
     <>
       <Script
@@ -31,12 +35,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Script>
 
       <Head>
-        <title>Site pessoal de Nadilson J. R. Teixeira</title>
+        <title>{t.main_page_title}</title>
         <FavIcon />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="HandheldFriendly" content="true" />
         <meta charSet="utf-8" />
       </Head>
@@ -50,7 +55,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             //initial={false}
             onExitComplete={() => window.scrollTo(0, 0)}
           >
-            <Component {...pageProps} />
+            <CookiesProvider>
+              <Component {...pageProps} />
+            </CookiesProvider>
           </AnimatePresence>
           <Footer />
         </ThemeProvider>

@@ -1,6 +1,9 @@
 import React from 'react'
+import { useLanguages } from '../hooks/useLanguages'
 
 const Footer = () => {
+  const t = useLanguages()
+
   return (
     <div className="lg:mt-18 bottom-0 mt-12 py-6 sm:py-12 sm:pb-36">
       <div className="mx-auto max-w-4xl px-4 text-gray-800 dark:text-white">
@@ -8,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between lg:flex-row">
           <div className="flex flex-1 flex-wrap space-x-2 pt-2 font-medium sm:space-x-4 lg:pt-0" />
           <p className="mt-auto text-right">
-            &copy; {new Date().getFullYear()} - Portfólio construído com{' '}
+            &copy; {new Date().getFullYear()} - {t.footer_text1}
             <a
               href="https://nextjs.org/"
               className={
@@ -20,7 +23,7 @@ const Footer = () => {
               {' '}
               <strong className="italic">Next.js</strong>
             </a>{' '}
-            e{' '}
+            {t.footer_text2}
             <a
               href="https://tailwindcss.com/"
               className={
@@ -31,7 +34,9 @@ const Footer = () => {
             >
               <strong className="italic">Tailwind CSS</strong>
             </a>
-            , com <em>Deploy</em> em{' '}
+            {t.footer_text3}
+            <em>Deploy</em>
+            {t.footer_text4}
             <a
               href="https://vercel.com/"
               className={

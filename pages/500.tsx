@@ -2,14 +2,15 @@ import Head from 'next/head'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import FavIcon from '../components/FavIcon'
+import { useLanguages } from '../hooks/useLanguages'
 
 const my500ErrorPage: NextPage = () => {
+  const t = useLanguages()
+
   return (
     <>
       <Head>
-        <title>
-          Site pessoal de Nadilson J. R. Teixeira - Erro de servidor
-        </title>
+        <title>{t.my_500_error_page_title}</title>
         <FavIcon />
       </Head>
 
@@ -24,10 +25,10 @@ const my500ErrorPage: NextPage = () => {
             height={300}
           />
           <div className="mt-2 inline-block pr-4 font-bold text-red-600 dark:text-blue-300">
-            Erro 500
+            {t.my_500_error_page_error_code}
           </div>
           <div className="mt-2 inline-block border-l-[1px] border-l-gray-500 pl-4 text-sm text-red-600 dark:text-blue-300">
-            Erro no servidor!
+            {t.my_500_error_page_error_description}
           </div>
 
           <div className="mx-auto pt-10">
@@ -37,7 +38,7 @@ const my500ErrorPage: NextPage = () => {
                   'text-sm font-bold tracking-wider transition-colors hover:text-blue-500 dark:text-white dark:hover:text-blue-400'
                 }
               >
-                <p>Voltar ao início</p>
+                <p>{t.my_500_error_page_go_back_link}</p>
               </a>
             </Link>
           </div>

@@ -9,8 +9,11 @@ import twitter from '../public/images/twitter.png'
 import whatsapp from '../public/images/whatsapp.png'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useLanguages } from '../hooks/useLanguages'
 
 const About = () => {
+  const t = useLanguages()
+
   return (
     <div className="mx-auto px-4">
       <div className="flex flex-col-reverse items-center text-center lg:-mx-4 lg:flex lg:flex-row lg:space-x-5 lg:text-left">
@@ -33,35 +36,28 @@ const About = () => {
             }}
           >
             <h1 className="text-4xl font-bold text-gray-900 underline decoration-sky-300 decoration-wavy underline-offset-8 dark:text-white lg:text-5xl">
-              Olá.
+              {t.about_page_greeting}
             </h1>
 
             <div className="mt-6 text-gray-800 dark:text-white">
-              <p className="mb-4 text-justify">
-                Meu nome é <strong>Nadilson</strong>. Sou desenvolvedor e
-                historiador e no momento, além de estar procurando emprego novo,
-                tenho investido meu tempo livre para &quot;brincar&quot; com
-                várias tecnologias e <em>frameworks</em>, mas sem deixar de ler
-                meus livros e artigos relacionados às duas áreas a que pertenço.
-                Também sou chegado em tocar guitarra. Tanto que tenho três, cada
-                uma com uma afinação diferente para tocar Metal Extremo (
-                <em>Drop C, Drop D</em> e <em>Drop C#</em>).
-              </p>
-              <p className="mb-4 text-justify">
-                Este site não é meu primeiro trabalho sério com{' '}
-                <strong className="italic">Next.js</strong>, mas é o primeiro a
-                utilizar o <em>framework</em>{' '}
-                <strong className="italic">Tailwind CSS</strong> e, portanto,
-                será parte do meu contínuo aprendizado sobre essas tecnologias.
-                Então, o site, que está agora em construção, estará sempre sendo
-                modificado e melhorado conforme mais experiência seja adquirida.
-              </p>
-              <p className="mb-4 text-justify">
-                Muito obrigado por visitar este meu trabalho, cujo código-fonte
-                pode ser obtido através do meu repositório no <em>Github</em>, e
-                não deixe de visitar o meu espaço no <em>LinkedIn</em> e na{' '}
-                <em>Play Store</em>. Precisando de amigo, pode contar comigo.
-              </p>
+              <p
+                className="mb-4 text-justify"
+                dangerouslySetInnerHTML={{
+                  __html: t.about_page_description_p1,
+                }}
+              />
+              <p
+                className="mb-4 text-justify"
+                dangerouslySetInnerHTML={{
+                  __html: t.about_page_description_p2,
+                }}
+              />
+              <p
+                className="mb-4 text-justify"
+                dangerouslySetInnerHTML={{
+                  __html: t.about_page_description_p3,
+                }}
+              />
             </div>
           </motion.div>
         </div>

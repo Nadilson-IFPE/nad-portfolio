@@ -4,8 +4,11 @@ autor_img: '/images/posts/me_myself.jpg'
 capa: '/images/posts/elogio_ebac.png'
 capa_posts_list: '/images/posts/elogio_ebac_posts_list.png'
 data: '06/05/2022'
-resumo: 'Durante a correção de um desafio com microsserviços, não esperava ser elogiado pelo instrutor.'
+locale: 'pt'
 titulo: 'Elogios ao vivo (Microsserviços)'
+titulo_ingles: 'Live Compliments (Microservices)'
+resumo: 'Durante a correção ao vivo de um desafio com microsserviços pelo instrutor, não esperava ser elogiado.'
+resumo_ingles: "During the instructor's live correction of a microservices challenge, I didn't expect to be praised."
 video: '/files/me/ebac_avaliacao.mp4'
 ---
 

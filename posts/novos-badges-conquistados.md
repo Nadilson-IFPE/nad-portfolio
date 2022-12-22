@@ -4,8 +4,12 @@ autor_img: '/images/posts/me_myself.jpg'
 capa: '/images/posts/iniciativa_devops_badges.png'
 capa_posts_list: '/images/posts/iniciativa_devops_badges_posts_lists.png'
 data: '06/08/2022'
-resumo: 'Conquistei 5 badges ao entregar os desafios de uma treinamento online, o Iniciativa DevOps.'
+locale: 'pt'
 titulo: 'Novos badges conquistados'
+titulo_ingles: 'New badges conquered'
+resumo: 'Conquistei 5 badges ao entregar os desafios de uma treinamento online, o Iniciativa DevOps.'
+resumo_ingles: 'I won 5 badges by delivering the challenges of an online training, the DevOps Initiative.'
+video: ''
 ---
 
 Há alguns dias, estive acompanhando o envento [Iniciativa DevOps](https://iniciativadevops.com.br/), promovido pela KubeDev e ministrado pelo [Fabricio Veronez](https://www.linkedin.com/in/fabricioveronez), da [Formação DevOps Pro](https://www.linkedin.com/company/devopspro/). O evento, segundo a própria descrição no site oficial, se tratou de "uma imersão de conteúdo com o intuito de mostrar ao desenvolvedor um método prático para se destacar no mercado como especialista em DevOps e conquistar um dos perfis mais desejados e bem remunerados". Nada mais verdadeiro. Atualmente, DevOps está em alta e não falta emprego.

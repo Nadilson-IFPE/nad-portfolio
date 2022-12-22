@@ -12,12 +12,14 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { NextPage } from 'next'
 import FavIcon from '../components/FavIcon'
+import { useLanguages } from '../hooks/useLanguages'
 
 const Contatos: NextPage = () => {
+  const t = useLanguages()
   return (
     <div className="mx-auto flex justify-center space-y-14 px-4 pt-5 lg:space-y-24">
       <Head>
-        <title>Site pessoal de Nadilson J. R. Teixeira - Contatos</title>
+        <title>{t.contact_page_title}</title>
         <FavIcon />
       </Head>
 
@@ -41,7 +43,7 @@ const Contatos: NextPage = () => {
             }}
           >
             <h1 className="text-center text-2xl font-bold text-gray-900 underline decoration-sky-300 decoration-wavy underline-offset-8 dark:text-white lg:text-4xl">
-              Contatos
+              {t.contact_page_header}
             </h1>
             <br />
           </motion.div>
@@ -69,7 +71,10 @@ const Contatos: NextPage = () => {
                 },
               }}
             >
-              <div className="flex flex-col rounded-lg border border-gray-200 bg-[#edeff5] shadow-lg shadow-indigo-500/50 dark:border-gray-700 dark:bg-gray-800 dark:shadow-indigo-500/50 md:max-w-xl md:flex-row">
+              <div
+                id="ContactCard"
+                className="flex flex-col rounded-lg border border-gray-200 bg-[#edeff5] shadow-lg shadow-indigo-500/50 dark:border-gray-700 dark:bg-gray-800 dark:shadow-indigo-500/50 md:max-w-xl md:flex-row"
+              >
                 <Image
                   src={profile}
                   alt="Nadilson José Rodrigues Teixeira"
@@ -89,16 +94,17 @@ const Contatos: NextPage = () => {
                   </header>
                   <div className="mb-4 text-base text-gray-700">
                     <ul className="text-center font-semibold text-gray-400">
-                      <li>Historiador</li>
-                      <li>Desenvolvedor</li>
-                      <li>Analista</li>
+                      <li>{t.contact_page_desc1}</li>
+                      <li>{t.contact_page_desc2}</li>
+                      <li>{t.contact_page_desc3}</li>
                     </ul>
                   </div>
 
                   <br />
 
                   <div className="mb-4 text-center font-semibold dark:text-white">
-                    Telefone: <br />
+                    {t.contact_page_phone}
+                    <br />
                     <a
                       href="tel:+5581986723962"
                       className="text-center font-semibold text-gray-400 hover:text-blue-500"
@@ -107,7 +113,8 @@ const Contatos: NextPage = () => {
                     </a>
                     <br /> <br />
                     <p className="mb-4 text-center font-semibold dark:text-white">
-                      E-mail: <br />
+                      {t.contact_page_email}
+                      <br />
                       <a
                         href="mailto:nadilson@protonmail.com"
                         className="text-center font-semibold text-gray-400 hover:text-blue-500"
@@ -116,7 +123,7 @@ const Contatos: NextPage = () => {
                       </a>
                     </p>
                     <p className="text-center text-xs dark:text-white">
-                      Encontre-me em:
+                      {t.contact_page_findme}
                     </p>
                   </div>
 

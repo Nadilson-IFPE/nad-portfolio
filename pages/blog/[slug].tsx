@@ -7,19 +7,33 @@ import Post from '../../models/post'
 import Link from 'next/link'
 import { NextPage } from 'next'
 import { motion } from 'framer-motion'
-import FavIcon from './../../components/FavIcon'
+import FavIcon from '../../components/FavIcon'
+import { useLanguages } from '../../hooks/useLanguages'
 
 const PostPage: NextPage<Post> = ({
-  frontmatter: { titulo, resumo, data, capa, autor, autor_img },
+  frontmatter: {
+    titulo,
+    titulo_ingles,
+    resumo,
+    resumo_ingles,
+    data,
+    capa,
+    capa_posts_list,
+    autor,
+    autor_img,
+    video,
+  },
   slug,
   content,
 }: Post) => {
+  const t = useLanguages()
   return (
     <>
       <div className="mx-auto justify-center space-y-14 px-4 pt-5 lg:space-y-24">
         <Head>
           <title>
-            Site pessoal de Nadilson J. R. Teixeira - Blog: {titulo}
+            {t.blog_article_page_title}
+            {titulo}
           </title>
         </Head>
 
@@ -49,7 +63,7 @@ const PostPage: NextPage<Post> = ({
             <div className="shadow-indigo-500/50">
               <Link href="/blog">
                 <a className="bg-[#ccd2e7] py-1 px-3 text-center font-medium text-white no-underline hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-800">
-                  Voltar
+                  {t.blog_btn_goback}
                 </a>
               </Link>
             </div>
@@ -66,11 +80,11 @@ const PostPage: NextPage<Post> = ({
             </div>
             <div className="bg-[#f4f4f4] px-4 dark:bg-slate-200 dark:text-black">
               <div>
-                <strong>Postado em: </strong>
+                <strong>{t.blogcard_post_date}</strong>
                 {data}
               </div>
               <div>
-                <strong>Autor: </strong>
+                <strong>{t.blogcard_author_name}</strong>
                 {autor}
               </div>
             </div>

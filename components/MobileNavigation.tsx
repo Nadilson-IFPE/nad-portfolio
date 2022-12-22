@@ -3,12 +3,15 @@ import Link from 'next/link'
 import { useRef, useState } from 'react'
 import UseOnClickOutside from '../hooks/useOnClickOutside'
 import profile from '../public/images/profile.png'
+import { useLanguages } from '../hooks/useLanguages'
 
 const MobileNavigation = () => {
   const [showSidebarMenu, setShowSidebarMenu] = useState(false)
 
   const myRef = useRef() as React.MutableRefObject<HTMLDivElement>
   UseOnClickOutside(myRef, () => setShowSidebarMenu(false))
+
+  const t = useLanguages()
 
   const handleClickOnLink = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -23,7 +26,7 @@ const MobileNavigation = () => {
       e.preventDefault()
       window.scroll(0, 0)
       targetParagraph!.innerHTML =
-        'Você já está na página <strong>' + page + '</strong>!'
+        `${t.nav_dynamic_error_message}` + '<strong>' + page + '</strong>!'
       targetDiv!.setAttribute(
         'class',
         'w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white'
@@ -116,7 +119,7 @@ const MobileNavigation = () => {
         </div>
 
         <p className="mb-10 text-sm font-semibold uppercase">
-          Site pessoal de Nadilson
+          {t.main_page_title}
         </p>
 
         <div className="content-start items-start justify-start">
@@ -131,11 +134,11 @@ const MobileNavigation = () => {
                       e,
                       e.currentTarget.href,
                       'toast-div',
-                      'INÍCIO'
+                      `${t.nav_home}`
                     )
                   }
                 >
-                  <strong>Início</strong>
+                  <strong>{t.nav_home}</strong>
                 </a>
               </Link>
             </li>
@@ -150,11 +153,11 @@ const MobileNavigation = () => {
                       e,
                       e.currentTarget.href,
                       'toast-div',
-                      'CV'
+                      `${t.nav_cv}`
                     )
                   }
                 >
-                  <strong>CV</strong>
+                  <strong>{t.nav_cv}</strong>
                 </a>
               </Link>
             </li>
@@ -169,11 +172,11 @@ const MobileNavigation = () => {
                       e,
                       e.currentTarget.href,
                       'toast-div',
-                      'Projetos'
+                      `${t.nav_projects}`
                     )
                   }
                 >
-                  <strong>Projetos</strong>
+                  <strong>{t.nav_projects}</strong>
                 </a>
               </Link>
             </li>
@@ -188,11 +191,11 @@ const MobileNavigation = () => {
                       e,
                       e.currentTarget.href,
                       'toast-div',
-                      'Contatos'
+                      `${t.nav_contact}`
                     )
                   }
                 >
-                  <strong>Contatos</strong>
+                  <strong>{t.nav_contact}</strong>
                 </a>
               </Link>
             </li>
@@ -207,11 +210,11 @@ const MobileNavigation = () => {
                       e,
                       e.currentTarget.href,
                       'toast-div',
-                      'Blog'
+                      `${t.nav_blog}`
                     )
                   }
                 >
-                  <strong>Blog</strong>
+                  <strong>{t.nav_blog}</strong>
                 </a>
               </Link>
             </li>
@@ -219,7 +222,9 @@ const MobileNavigation = () => {
         </div>
 
         <p className="mt-auto text-xs text-gray-400">
-          <span>&copy; {new Date().getFullYear()} - Nadilson</span>
+          <span>
+            &copy; {new Date().getFullYear()} - Nadilson J. R. Teixeira
+          </span>
         </p>
       </div>
     </>

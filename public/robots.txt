@@ -2,14 +2,16 @@ Sitemap: https://nadportfolio.vercel.app/sitemap.xml
 
 User-agent: *
 Allow: /*
-
 Disallow: /api/*
 
-
+User-agent:Twitterbot
+Disallow:
 
 Sitemap: http://localhost:3000/sitemap.xml
 
 User-agent: *
 Allow: /*
-
 Disallow: /api/*
+
+User-agent:Twitterbot
+Disallow:
