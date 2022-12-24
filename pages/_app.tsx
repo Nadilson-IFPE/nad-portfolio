@@ -6,7 +6,7 @@ import 'tailwindcss/tailwind.css'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { ThemeProvider } from 'next-themes'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { DefaultSeo } from 'next-seo'
 import FavIcon from './../components/FavIcon'
 import Script from 'next/script'
@@ -50,15 +50,17 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeProvider attribute="class" enableSystem={false}>
           <DefaultSeo {...SEO} />
           <Navigation />
-          <AnimatePresence
-            exitBeforeEnter
-            //initial={false}
-            onExitComplete={() => window.scrollTo(0, 0)}
-          >
-            <CookiesProvider>
-              <Component {...pageProps} />
-            </CookiesProvider>
-          </AnimatePresence>
+          <CookiesProvider>
+            <AnimatePresence
+              exitBeforeEnter
+              //initial={false}
+              onExitComplete={() => window.scrollTo(0, 0)}
+            >
+              <motion.div initial="initial" animate="animate" exit="exit">
+                <Component {...pageProps} />
+              </motion.div>
+            </AnimatePresence>
+          </CookiesProvider>
           <Footer />
         </ThemeProvider>
       </div>

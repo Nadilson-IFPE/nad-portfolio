@@ -1,16 +1,18 @@
 import Head from 'next/head'
 import React from 'react'
-import { motion } from 'framer-motion'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Post from '../models/post'
 import { NextPage } from 'next'
-import Link from 'next/link'
 import FavIcon from '../components/FavIcon'
 import BlogCard from '../components/BlogCard'
 import { useLanguages } from '../hooks/useLanguages'
 import { useRouter } from 'next/router'
+import {
+  BottomToTopAnimation,
+  TopToBottomAnimation,
+} from '../components/Animations'
 
 type BlogProps = {
   posts: Array<Post>
@@ -51,51 +53,14 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
       <div className="mx-auto flex justify-center space-y-14 px-4 pt-5 lg:space-y-24">
         <div className="item-center mx-auto flex flex-col-reverse lg:-mx-4 lg:flex lg:flex-row lg:space-x-5 lg:text-left">
           <div className="shadow-indigo-500/50 lg:mt-6 lg:px-4">
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: {
-                  scale: 0.8,
-                  opacity: 0,
-                },
-                visible: {
-                  scale: 1,
-                  opacity: 1,
-                  transition: {
-                    delay: 0.2,
-                  },
-                },
-              }}
-            >
+            <BottomToTopAnimation>
               <h1 className="text-center text-2xl font-bold text-gray-900 underline decoration-sky-300 decoration-wavy underline-offset-8 dark:text-white lg:text-4xl">
                 {t.blog_page_header}
               </h1>
               <br />
-            </motion.div>
+            </BottomToTopAnimation>
 
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{
-                duration: 0.7,
-              }}
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  rotateZ: 360,
-                },
-                visible: {
-                  opacity: 1,
-                  rotateZ: 0,
-                },
-                exit: {
-                  opacity: 0,
-                  rotateZ: 360,
-                },
-              }}
-            >
+            <TopToBottomAnimation>
               <div className="mx-auto grid grid-flow-row grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
                 {posts.map((post, idx) => {
                   return (
@@ -124,7 +89,7 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                   )
                 })}
               </div>
-            </motion.div>
+            </TopToBottomAnimation>
           </div>
         </div>
       </div>

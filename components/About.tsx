@@ -10,6 +10,7 @@ import whatsapp from '../public/images/whatsapp.png'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useLanguages } from '../hooks/useLanguages'
+import { RotateZAnimation, ShowTextAnimation } from './Animations'
 
 const About = () => {
   const t = useLanguages()
@@ -18,23 +19,7 @@ const About = () => {
     <div className="mx-auto px-4">
       <div className="flex flex-col-reverse items-center text-center lg:-mx-4 lg:flex lg:flex-row lg:space-x-5 lg:text-left">
         <div className="lg:mt-12 lg:px-4">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {
-                scale: 0.8,
-                opacity: 0,
-              },
-              visible: {
-                scale: 1,
-                opacity: 1,
-                transition: {
-                  delay: 0.2,
-                },
-              },
-            }}
-          >
+          <ShowTextAnimation>
             <h1 className="text-4xl font-bold text-gray-900 underline decoration-sky-300 decoration-wavy underline-offset-8 dark:text-white lg:text-5xl">
               {t.about_page_greeting}
             </h1>
@@ -59,32 +44,11 @@ const About = () => {
                 }}
               />
             </div>
-          </motion.div>
+          </ShowTextAnimation>
         </div>
 
         <div className="flex-shrink-0 lg:mt-12 lg:px-4">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{
-              duration: 0.7,
-            }}
-            variants={{
-              hidden: {
-                opacity: 0,
-                rotateZ: 360,
-              },
-              visible: {
-                opacity: 1,
-                rotateZ: 0,
-              },
-              exit: {
-                opacity: 0,
-                rotateZ: 360,
-              },
-            }}
-          >
+          <RotateZAnimation>
             <Image
               src={profile}
               alt="Nadilson José Rodrigues Teixeira"
@@ -241,7 +205,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </RotateZAnimation>
         </div>
       </div>
     </div>

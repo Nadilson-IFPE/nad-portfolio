@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import React from 'react'
-import Image from 'next/image'
 import badge01 from '../public/images/badges/badge01.png'
 import badge02 from '../public/images/badges/badge02.png'
 import badge03 from '../public/images/badges/badge03.png'
@@ -21,13 +20,17 @@ import badge17 from '../public/images/badges/badge17.png'
 import badge18 from '../public/images/badges/badge18.png'
 import certiprof from '../public/images/certiprof.png'
 import certiprof_new from '../public/images/certiprof_new.png'
-import { motion } from 'framer-motion'
 import { NextPage } from 'next'
 import FavIcon from '../components/FavIcon'
 import { useLanguages } from '../hooks/useLanguages'
 import BadgesCard from '../components/BadgesCard'
 import DetailsSection from '../components/DetailsSection'
 import CertificationsCard from '../components/CertificationsCard'
+import {
+  RightToLeftAnimation,
+  BottomToTopAnimation,
+  RotateZAnimation,
+} from '../components/Animations'
 
 const cv_url = process.env.NEXT_PUBLIC_CV_PDF_URL!
 const english_cv_url = process.env.NEXT_PUBLIC_CV_ENGLISH_PDF_URL!
@@ -120,29 +123,13 @@ const CV: NextPage = () => {
 
       <div className="item-center flex min-h-screen flex-col lg:-mx-4 lg:flex lg:flex-row lg:space-x-5 lg:text-left">
         <div className="shadow-indigo-500/50 lg:mt-12 lg:px-4">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {
-                scale: 0.8,
-                opacity: 0,
-              },
-              visible: {
-                scale: 1,
-                opacity: 1,
-                transition: {
-                  delay: 0.2,
-                },
-              },
-            }}
-          >
+          <RightToLeftAnimation>
             <h1 className="text-center text-2xl font-bold text-gray-900 underline decoration-sky-300 decoration-wavy underline-offset-8 dark:text-white lg:text-4xl">
               {t.cv_page_header}
             </h1>
-
-            <br />
-
+          </RightToLeftAnimation>
+          <br />
+          <BottomToTopAnimation>
             <div className="bg-[#eeebeb] shadow-lg shadow-indigo-500/50 dark:shadow-indigo-500/50">
               <h3 className="prose p-4 text-justify dark:text-black">
                 {t.cv_page_info1}
@@ -172,34 +159,13 @@ const CV: NextPage = () => {
                 {t.cv_page_info5}
               </h3>
             </div>
-          </motion.div>
+          </BottomToTopAnimation>
 
           <br />
 
           <div className="text-gray-800">
             <article className="lg:prose-x1 accordion-section prose dark:text-black">
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                transition={{
-                  duration: 0.7,
-                }}
-                variants={{
-                  hidden: {
-                    opacity: 0,
-                    rotateZ: 360,
-                  },
-                  visible: {
-                    opacity: 1,
-                    rotateZ: 0,
-                  },
-                  exit: {
-                    opacity: 0,
-                    rotateZ: 360,
-                  },
-                }}
-              >
+              <RotateZAnimation>
                 <DetailsSection
                   title={t.cv_page_objective_header}
                   text={t.cv_page_objective_description}
@@ -427,7 +393,7 @@ const CV: NextPage = () => {
                 <br />
 
                 <div className="dark:border-white-300 mb-2 border-t-2 border-gray-300 pb-8" />
-              </motion.div>
+              </RotateZAnimation>
             </article>
           </div>
         </div>

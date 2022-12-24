@@ -1,6 +1,6 @@
 export default {
   // https://www.npmjs.com/package/next-seo#title-template
-  title: 'Site pessoal e portifólio',
+  title: 'Site pessoal e portfólio',
   titleTemplate: '%s | Nadilson J. R. Teixeira',
   // https://www.npmjs.com/package/next-seo#open-graph
   openGraph: {

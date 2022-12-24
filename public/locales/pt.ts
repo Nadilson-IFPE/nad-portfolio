@@ -18,7 +18,7 @@ export default {
 
   about_page_title: 'Site pessoal de Nadilson J. R. Teixeira - Sobre',
   about_page_greeting: 'Olá.',
-  about_page_description_p1: `Meu nome é <strong>Nadilson</strong>. Sou desenvolvedor e
+  about_page_description_p1: `Meu nome é <strong>Nadilson</strong>. Sou desenvolvedor de software e
   historiador e no momento, além de estar procurando emprego novo,
   tenho investido meu tempo livre para &quot;brincar&quot; com
   várias tecnologias e <em>frameworks</em>, mas sem deixar de ler
@@ -60,15 +60,15 @@ export default {
   com os deveres que me forem atribuídos.`,
 
   cv_page_skills_header: 'HABILIDADES',
-  cv_page_skills_description: `•	Programação em linguagem Java;
+  cv_page_skills_description: `• Programação em linguagem Java;
   <br />
   •	Desenvolvimento de softwares para SO Android;
   <br />
-  •	Java Server Pages (JSP), Java Server Faces (JSF);
+  • Java Server Pages (JSP), Java Server Faces (JSF);
   <br />
-  •	HTML, CSS (inclui Tailwind CSS e outros) e JavaScript;
+  • HTML, CSS (inclui Tailwind CSS e outros) e JavaScript;
   <br />
-  •	Typescript, React, React Native, Angular, Node, Ionic, NextJS, VueJS e Flutter;
+  • Typescript, React, React Native, Angular, Node, Ionic, NextJS, VueJS e Flutter;
   <br />
   •	Spring Boot, JWT, Hibernate, Rest;
   <br />
@@ -78,15 +78,19 @@ export default {
   <br />
   •	Microsserviços;
   <br />
-  •	Docker e Kubernetes, CI-CD, Prometheus, Grafana;
+  • Docker e Kubernetes, CI-CD, Prometheus, Grafana;
   <br />
   •	Salesforce;
   <br />
-  •	Cloud (app Spring/Ionic com bucket de imagens hospedado na AWS e com exemplo publicado na Play Store);
+  • Cloud (app Spring/Ionic com bucket de imagens 
+  hospedado na AWS e com exemplo publicado na Play Store);
   <br />
-  •	Programação em ambiente de desenvolvimento de software Borland Delphi, incluindo Delphi Mobile; 
+  • Programação em ambiente de desenvolvimento de
+   software Borland Delphi, incluindo Delphi Mobile; 
   <br />
-  •	UNIX: Solaris (Sun Microsystems - Interface GNOME Desktop, CDE e Java Desktop System - Instalação e administração desde plataformas Ultra SPARC II a Intel/AMD x86 e x64);
+  • UNIX: Solaris (Sun Microsystems - Interface GNOME Desktop, 
+    CDE e Java Desktop System - Instalação e administração 
+    desde plataformas Ultra SPARC II a Intel/AMD x86 e x64);
   <br />
   •	Linux.`,
 

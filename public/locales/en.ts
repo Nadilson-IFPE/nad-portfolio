@@ -18,7 +18,7 @@ export default {
 
   about_page_title: "Nadilson J. R. Teixeira's personal website - About",
   about_page_greeting: 'Hi there.',
-  about_page_description_p1: `My name is <strong>Nadilson</strong>. I'm a developer and
+  about_page_description_p1: `My name is <strong>Nadilson</strong>. I'm a software developer and
   historian and at the moment, in addition to be looking for a new job,
   I've been investing my free time to &quot;play&quot; with
   several technologies and <em>frameworks</em>, but without forgetting to read
