@@ -12,6 +12,7 @@ import FavIcon from './../components/FavIcon'
 import Script from 'next/script'
 import { useLanguages } from './../hooks/useLanguages'
 import { CookiesProvider } from 'react-cookie'
+import { Analytics } from '@vercel/analytics/react'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const t = useLanguages()
@@ -59,6 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               <motion.div initial="initial" animate="animate" exit="exit">
                 <Component {...pageProps} />
               </motion.div>
+              <Analytics />
             </AnimatePresence>
           </CookiesProvider>
           <Footer />

@@ -5,7 +5,6 @@ import {
   BottomToTopAnimation,
   LeftToRightAnimation,
   RightToLeftAnimation,
-  RotateZAnimation,
   TopToBottomAnimation,
 } from '../components/Animations'
 import { useLanguages } from '../hooks/useLanguages'
@@ -52,7 +51,7 @@ const UnderConstruction: NextPage = () => {
             <Link href="/">
               <a
                 className={
-                  'text-sm text-2xl font-bold tracking-wider text-white transition-colors hover:text-yellow-500 dark:text-white dark:hover:text-yellow-500'
+                  'text-sm font-bold tracking-wider text-white transition-colors hover:text-yellow-500 dark:text-white dark:hover:text-yellow-500'
                 }
               >
                 <p>{t.my_404_error_page_go_back_link}</p>
