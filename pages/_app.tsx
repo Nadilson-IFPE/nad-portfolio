@@ -37,12 +37,50 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <Head>
         <title>{t.main_page_title}</title>
+        <meta name="description" content={t.main_page_title_description}></meta>
         <FavIcon />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
+
+        {/* Google / Search Engine Tags */}
+        <meta itemProp="name" content={t.main_page_title} />
+        <meta
+          itemProp="description"
+          content="Site pessoal de Nadilson J. R. Teixeira, Desenvolvedor, Analista e Historiador."
+        />
+        <meta
+          itemProp="image"
+          content="https://nadportfolio.vercel.app/images/profile.png"
+        />
+
+        {/* Facebook Meta Tags */}
+        <meta property="og:url" content="https://nadportfolio.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t.main_page_title} />
+        <meta property="og:description" content={t.main_page_title} />
+        <meta
+          property="og:image"
+          content="https://nadportfolio.vercel.app/images/profile.png"
+        />
+
+        <meta property="og:image:width" content="300" />
+
+        <meta property="og:image:height" content="300" />
+
+        {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t.main_page_title} />
+        <meta
+          name="twitter:description"
+          content={t.main_page_title_description}
+        />
+        <meta
+          name="twitter:image"
+          content="https://nadportfolio.vercel.app/images/profile.png"
+        />
+
         <meta name="HandheldFriendly" content="true" />
         <meta charSet="utf-8" />
       </Head>

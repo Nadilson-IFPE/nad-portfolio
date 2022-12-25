@@ -7,7 +7,13 @@ export default {
   nav_error_message: 'You are already on this page!',
   nav_dynamic_error_message: 'You are already on the page ',
 
-  main_page_title: "Nadilson J. R. Teixeira's personal website",
+  main_page_title: 'Personal website and portfolio | Nadilson J. R. Teixeira',
+  main_page_title_description:
+    'Personal website of Nadilson J. R. Teixeira, Software Developer, Analyst and Historian.',
+
+  seo_profile_title: 'Personal website and portfolio',
+  seo_profile_description:
+    'Nadilson J. R. Teixeira | Software Developer, Analyst and Historian',
 
   home_page_title: "Nadilson J. R. Teixeira's personal website - Home",
 

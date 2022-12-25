@@ -7,7 +7,13 @@ export default {
   nav_error_message: 'Você já está nesta página!',
   nav_dynamic_error_message: 'Você já está na página ',
 
-  main_page_title: 'Site pessoal de Nadilson J. R. Teixeira',
+  main_page_title: 'Site pessoal e portfólio | Nadilson J. R. Teixeira',
+  main_page_title_description:
+    'Site pessoal de Nadilson J. R. Teixeira, Desenvolvedor de software, Analista e Historiador.',
+
+  seo_profile_title: 'Site pessoal e portfólio',
+  seo_profile_description:
+    'Nadilson J. R. Teixeira | Desenvolvedor de software, Analista e Historiador',
 
   home_page_title: 'Site pessoal de Nadilson J. R. Teixeira - Início',
 
