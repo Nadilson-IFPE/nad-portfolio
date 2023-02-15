@@ -83,7 +83,11 @@ const MobileNavigation = () => {
       <div
         ref={myRef}
         className={`mobile-menu fixed top-0 left-0 bottom-0 z-50 flex w-4/6 max-w-sm transform flex-col content-start overflow-y-auto border-r bg-[#b9c1e0] px-6 py-6 text-center transition duration-500 ease-in-out dark:bg-[#1c1b22] dark:text-white sm:text-left md:hidden lg:hidden xl:hidden 2xl:hidden ${
-          showSidebarMenu ? 'block' : 'hidden'
+          // showSidebarMenu ? 'block' : 'hidden'
+          // Suavização na abertura do menu mobile
+          showSidebarMenu
+            ? '.3s block transition-transform ease-in-out md:-translate-x-0'
+            : '-translate-x-full'
         }`}
       >
         <div className="right-0 top-0">
@@ -127,7 +131,7 @@ const MobileNavigation = () => {
             <li className="p-5">
               <Link href="/" passHref scroll={false}>
                 <a
-                  className="font-medium uppercase tracking-wider transition-colors hover:text-blue-400"
+                  className="font-medium uppercase tracking-wider transition-colors duration-300 hover:text-blue-400"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -146,7 +150,7 @@ const MobileNavigation = () => {
             <li className="p-5">
               <Link href="/cv" passHref>
                 <a
-                  className="transition-colors hover:text-blue-400"
+                  className="transition-colors duration-300 hover:text-blue-400"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -165,7 +169,7 @@ const MobileNavigation = () => {
             <li className="p-5">
               <Link href="/projetos" passHref>
                 <a
-                  className="transition-colors hover:text-blue-400"
+                  className="transition-colors duration-300 hover:text-blue-400"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -184,7 +188,7 @@ const MobileNavigation = () => {
             <li className="p-5">
               <Link href="/contatos" passHref>
                 <a
-                  className="transition-colors hover:text-blue-400"
+                  className="transition-colors duration-300 hover:text-blue-400"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -203,7 +207,7 @@ const MobileNavigation = () => {
             <li className="p-5">
               <Link href="/blog" passHref>
                 <a
-                  className="transition-colors hover:text-blue-400"
+                  className="transition-colors duration-300 hover:text-blue-400"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(

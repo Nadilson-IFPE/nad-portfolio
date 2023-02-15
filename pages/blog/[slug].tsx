@@ -11,6 +11,7 @@ import { useLanguages } from '../../hooks/useLanguages'
 import { useRouter } from 'next/router'
 
 type GetStaticPathsContext = {
+  locale?: string
   locales?: string[]
   defaultLocale?: string
 }
@@ -113,7 +114,7 @@ const PostPage: NextPage<Post> = ({
 
 export default PostPage
 
-export async function getStaticPaths({ locales }: any) {
+export async function getStaticPaths({ locales }: GetStaticPathsContext) {
   const files = fs.readdirSync(path.join('posts'))
 
   /* const paths = files.map((fileName) => ({
@@ -128,7 +129,7 @@ export async function getStaticPaths({ locales }: any) {
   } */
   const pathsArray: { params: { slug: string }; locale: string }[] = []
   files.map((dirname) => {
-    locales.map((language: string) => {
+    locales?.map((language: string) => {
       pathsArray.push({ params: { slug: dirname }, locale: language })
     })
   })

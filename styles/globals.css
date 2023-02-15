@@ -40,17 +40,17 @@ details[open] > *:not(summary) {
 
 .blog_post-body ul,
 ol {
-  font-size: 110%;
-  line-height: 2.3;
+  font-size: 100%;
+  line-height: 2;
   font-weight: bold;
   margin: 10px 0;
 }
 
 .blog_post-body pre {
-  background: #496ee6;
-  padding: 20px;
-  margin: 20px 0;
-  line-height: 2.3;
+  background: #55628d;
+  padding: 10px;
+  margin: 10px 0;
+  line-height: 2;
 }
 
 .mobile-menu {
