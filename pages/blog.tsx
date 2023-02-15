@@ -4,15 +4,15 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Post from '../models/post'
-import { NextPage } from 'next'
+import { GetStaticPropsContext, NextPage } from 'next'
 import FavIcon from '../components/FavIcon'
 import BlogCard from '../components/BlogCard'
 import { useLanguages } from '../hooks/useLanguages'
-import { useRouter } from 'next/router'
 import {
   BottomToTopAnimation,
   TopToBottomAnimation,
 } from '../components/Animations'
+import { useRouter } from 'next/router'
 
 type BlogProps = {
   posts: Array<Post>
@@ -39,10 +39,6 @@ function precedaComZero(numero: number) {
 
 const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
   const t = useLanguages()
-  const { locale } = useRouter()
-
-  /* console.log('IDIOMA: ' + locale) */
-
   return (
     <>
       <Head>
@@ -65,7 +61,7 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                 {posts.map((post, idx) => {
                   return (
                     <BlogCard
-                      key={idx}
+                      key={Math.random()}
                       cardIndex={idx}
                       cardNumber={precedaComZero(idx + 1)}
                       cardImage={`${post.frontmatter.capa_posts_list}`}
@@ -73,17 +69,9 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                       postDate={post.frontmatter.data}
                       author={post.frontmatter.autor}
                       authorImage={post.frontmatter.autor_img}
-                      title={
-                        locale === 'en'
-                          ? post.frontmatter.titulo_ingles
-                          : post.frontmatter.titulo
-                      }
-                      description={
-                        locale === 'en'
-                          ? post.frontmatter.resumo_ingles
-                          : post.frontmatter.resumo
-                      }
-                      btnLink={`blog/${encodeURIComponent(post.slug)}`}
+                      title={post.frontmatter.titulo}
+                      description={post.frontmatter.resumo}
+                      btnLink={`/blog/${encodeURIComponent(post.slug)}`}
                       btnText={t.blogcard_button_caption}
                     />
                   )
@@ -97,56 +85,44 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
   // Obtém os arquivos do diretório "posts"
   const files = fs.readdirSync(path.join('posts'))
 
   // Obtém o slug e o frontmatter do diretório "posts"
-  const posts = files.map((fileName) => {
+  const postsData = files.map((fileName) => {
     // Cria o slug (título/nome do arquivo ".md" sem a extensão)
-    const slug = fileName.replace('.md', '')
+    // const slug = fileName.replace('.md', '')
 
     // Obtém o frontmatter (assunto ou conteúdo dos arquivos ".md" para transformar em
     // em texto humanamente legível no formato HTML)
     const markdownWithMeta = fs.readFileSync(
-      path.join('posts', fileName),
+      path.join('posts/' + fileName + `/${locale}.md`),
       'utf-8'
     )
 
-    const { data: frontmatter } = matter(markdownWithMeta)
+    const { data: frontmatter, content } = matter(markdownWithMeta)
 
-    // Retorna o título/nome do arquivo (sem a extensão) e o conteúdo formatado para HTML.
-    // Nesta página, retonará o título, que virará o URL a ser acessado. O conteúdo aqui
-    // será apenas as informações que constam nos arquivos ".md", como, por exemplo, as
-    // que estão antes do conteúdo:
-
-    // ---
-    // titulo: 'MEU_TÍTULO'
-    // data: 'MINHA_DATA'
-    // resumo: 'MEU_RESUMO_DA_POSTAGEM'
-    // capa: 'LINK_PARA_A_IMAGEM_DE_CAPA'
-    // capa_posts_list: 'LINK_PARA_A_IMAGEM_DE_CAPA_EXIBIDA_NA_LISTA_DE_POSTAGENS'
-    // video: 'LINK_PARA_O_VÍDEO_(SE_HOUVER!)'
-    // autor: 'NOME_DO_AUTOR_DA_POSTAGEM'
-    // autor_img: 'LINK_PARA_IMAGEM_DO_AUTOR'
-    // ---
-    //
-    //
-    // No arquivo "[slug].tsx" haverá o item "content", que retornará algumas informações
-    // sobre a postagem e o conteúdo da postagem, isto é, o texto principal da publicação.
     return {
-      slug,
+      slug: fileName,
       frontmatter,
+      content,
     }
   })
 
+  const posts = JSON.parse(JSON.stringify(postsData))
+
   return {
     props: {
-      posts: posts.sort((post1, post2) =>
-        new Date(post1.frontmatter.data).toLocaleDateString('pt-BR') >
-        new Date(post2.frontmatter.data).toLocaleDateString('pt-BR')
-          ? -1
-          : 1
+      posts: posts.sort(
+        (
+          post1: { frontmatter: { data: string | number | Date } },
+          post2: { frontmatter: { data: string | number | Date } }
+        ) =>
+          new Date(post1.frontmatter.data).toLocaleDateString('pt-BR') >
+          new Date(post2.frontmatter.data).toLocaleDateString('pt-BR')
+            ? -1
+            : 1
       ),
     },
   }

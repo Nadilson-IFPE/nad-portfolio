@@ -10,8 +10,9 @@ export default function LanguageSelector() {
   const { locale, asPath } = router
 
   const changeLocale = () => {
+    const lang = router.locale === 'en' ? 'pt' : 'en'
     router.push(router.pathname, asPath, {
-      locale: locale ? (locale === 'en' ? 'pt' : 'en') : 'en',
+      locale: lang,
     })
   }
 

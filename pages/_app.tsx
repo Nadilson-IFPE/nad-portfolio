@@ -11,7 +11,6 @@ import { DefaultSeo } from 'next-seo'
 import FavIcon from './../components/FavIcon'
 import Script from 'next/script'
 import { useLanguages } from './../hooks/useLanguages'
-import { CookiesProvider } from 'react-cookie'
 import { Analytics } from '@vercel/analytics/react'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -89,18 +88,17 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeProvider attribute="class" enableSystem={false}>
           <DefaultSeo {...SEO} />
           <Navigation />
-          <CookiesProvider>
-            <AnimatePresence
-              exitBeforeEnter
-              //initial={false}
-              onExitComplete={() => window.scrollTo(0, 0)}
-            >
-              <motion.div initial="initial" animate="animate" exit="exit">
-                <Component {...pageProps} />
-              </motion.div>
-              <Analytics />
-            </AnimatePresence>
-          </CookiesProvider>
+          <AnimatePresence
+            key={Math.random()}
+            exitBeforeEnter={false}
+            //initial={false}
+            onExitComplete={() => window.scrollTo(0, 0)}
+          >
+            <motion.div initial="initial" animate="animate" exit="exit">
+              <Component {...pageProps} />
+            </motion.div>
+            <Analytics />
+          </AnimatePresence>
           <Footer />
         </ThemeProvider>
       </div>

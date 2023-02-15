@@ -4,11 +4,8 @@ autor_img: '/images/posts/me_myself.jpg'
 capa: '/images/posts/iniciativa_devops_badges.png'
 capa_posts_list: '/images/posts/iniciativa_devops_badges_posts_lists.png'
 data: '06/08/2022'
-locale: 'pt'
 titulo: 'Novos badges conquistados'
-titulo_ingles: 'New badges conquered'
-resumo: 'Conquistei 5 badges ao entregar os desafios de uma treinamento online, o Iniciativa DevOps.'
-resumo_ingles: 'I won 5 badges by delivering the challenges of an online training, the DevOps Initiative.'
+resumo: 'Conquistei 5 badges ao entregar os desafios de um treinamento online, o Iniciativa DevOps.'
 video: ''
 ---
 

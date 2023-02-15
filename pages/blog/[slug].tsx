@@ -7,15 +7,18 @@ import Post from '../../models/post'
 import Link from 'next/link'
 import { NextPage } from 'next'
 import { motion } from 'framer-motion'
-import FavIcon from '../../components/FavIcon'
 import { useLanguages } from '../../hooks/useLanguages'
+import { useRouter } from 'next/router'
+
+type GetStaticPathsContext = {
+  locales?: string[]
+  defaultLocale?: string
+}
 
 const PostPage: NextPage<Post> = ({
   frontmatter: {
     titulo,
-    titulo_ingles,
     resumo,
-    resumo_ingles,
     data,
     capa,
     capa_posts_list,
@@ -27,7 +30,9 @@ const PostPage: NextPage<Post> = ({
   content,
 }: Post) => {
   const t = useLanguages()
-  return (
+  const { locale } = useRouter()
+
+  return titulo !== '' ? (
     <>
       <div className="mx-auto justify-center space-y-14 px-4 pt-5 lg:space-y-24">
         <Head>
@@ -96,15 +101,22 @@ const PostPage: NextPage<Post> = ({
         </motion.div>
       </div>
     </>
+  ) : (
+    <>
+      <h1>Sorry!</h1>
+      {locale === 'en' && (
+        <p>Sorry, this entry is not available yet in English.</p>
+      )}
+    </>
   )
 }
 
 export default PostPage
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ locales }: any) {
   const files = fs.readdirSync(path.join('posts'))
 
-  const paths = files.map((fileName) => ({
+  /* const paths = files.map((fileName) => ({
     params: {
       slug: fileName.replace('.md', ''),
     },
@@ -113,16 +125,29 @@ export async function getStaticPaths() {
   return {
     paths,
     fallback: false,
+  } */
+  const pathsArray: { params: { slug: string }; locale: string }[] = []
+  files.map((dirname) => {
+    locales.map((language: string) => {
+      pathsArray.push({ params: { slug: dirname }, locale: language })
+    })
+  })
+
+  return {
+    paths: pathsArray,
+    fallback: false,
   }
 }
 
 export async function getStaticProps({
+  locale,
   params: { slug },
 }: {
+  locale: string
   params: { slug: string }
 }) {
   const markeddownWithMeta = fs.readFileSync(
-    path.join('posts', slug + '.md'),
+    path.join('posts/' + slug + `/${locale}.md`),
     'utf-8'
   )
 
@@ -130,7 +155,7 @@ export async function getStaticProps({
 
   return {
     props: {
-      frontmatter,
+      frontmatter: JSON.parse(JSON.stringify(frontmatter)),
       slug,
       content,
     },

@@ -18,6 +18,11 @@ import badge15 from '../public/images/badges/badge15.png'
 import badge16 from '../public/images/badges/badge16.png'
 import badge17 from '../public/images/badges/badge17.png'
 import badge18 from '../public/images/badges/badge18.png'
+import badge19 from '../public/images/badges/badge19.png'
+import badge20 from '../public/images/badges/badge20.png'
+import badge21 from '../public/images/badges/badge21.png'
+import badge22 from '../public/images/badges/badge22.png'
+import badge23 from '../public/images/badges/badge23.png'
 import certiprof from '../public/images/certiprof.png'
 import certiprof_new from '../public/images/certiprof_new.png'
 import { NextPage } from 'next'
@@ -301,14 +306,6 @@ const CV: NextPage = () => {
 
                       <BadgesCard
                         cardLink={
-                          'https://api.badgr.io/public/assertions/q_mtqixUTYiDPnIwgtUk3g'
-                        }
-                        imgSrc={badge08.src}
-                        imgAlt="Certiprof - Lifelong Learning"
-                      />
-
-                      <BadgesCard
-                        cardLink={
                           'https://api.badgr.io/public/assertions/zEjvYeCZQRu3mfsn29F8zQ'
                         }
                         imgSrc={badge09.src}
@@ -385,6 +382,54 @@ const CV: NextPage = () => {
                         }
                         imgSrc={badge18.src}
                         imgAlt="Jornada DevOps de Elite - Prometheus + Grafana"
+                      />
+
+                      <BadgesCard
+                        cardLink={
+                          'https://api.badgr.io/public/assertions/q_mtqixUTYiDPnIwgtUk3g'
+                        }
+                        imgSrc={badge08.src}
+                        imgAlt="Certiprof - Lifelong Learning"
+                      />
+
+                      <BadgesCard
+                        cardLink={
+                          'https://api.badgr.io/public/assertions/7oiHlCgbQHavMiDqLOIwBQ'
+                        }
+                        imgSrc={badge19.src}
+                        imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Docker"
+                      />
+
+                      <BadgesCard
+                        cardLink={
+                          'https://api.badgr.io/public/assertions/yk4WOaAkRrCqm1B7ti4t2w'
+                        }
+                        imgSrc={badge20.src}
+                        imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Kubernetes"
+                      />
+
+                      <BadgesCard
+                        cardLink={
+                          'https://api.badgr.io/public/assertions/AcrSGqEhR3yPJqc0D2UeYw'
+                        }
+                        imgSrc={badge21.src}
+                        imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Terraform"
+                      />
+
+                      <BadgesCard
+                        cardLink={
+                          'https://api.badgr.io/public/assertions/zYkNY8kKR7GJMg9IfV8Xeg'
+                        }
+                        imgSrc={badge22.src}
+                        imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - CI/CD, Jenkins"
+                      />
+
+                      <BadgesCard
+                        cardLink={
+                          'https://api.badgr.io/public/assertions/J4HrxZGyTGWT48vhmghIXg'
+                        }
+                        imgSrc={badge23.src}
+                        imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Prometheus + Grafana"
                       />
                     </div>
                   </div>

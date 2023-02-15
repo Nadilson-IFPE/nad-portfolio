@@ -1,6 +1,4 @@
-import { NextPage } from 'next'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { useLanguages } from '../hooks/useLanguages'
 
 interface BlogCardProps {
@@ -33,20 +31,11 @@ const BlogCard = ({
 }: BlogCardProps) => {
   const t = useLanguages()
 
-  /* const { locale } = useRouter()
-
-  {
-    console.log('IDIOMA: ' + locale)
-  }
-  {
-    console.log('KEY: ' + cardIndex)
-  }
- */
   return (
     <Link key={cardIndex} href={btnLink} passHref>
       <article
         id={`${'BlogCard_'}${cardNumber}`}
-        key={cardIndex}
+        key={Math.random()}
         className="shadow-[0 4px 8px 0 rgba(140, 181, 243, 0.2)] max-w-sm rounded-2xl rounded-t-2xl border border-gray-200 bg-white p-[5px] shadow-lg shadow-indigo-500/50 dark:border-gray-700 dark:bg-gray-800 dark:shadow-indigo-500/50"
       >
         <div className="shadow-indigo-500/50dark:border-gray-700 max-w-sm overflow-hidden rounded-2xl dark:bg-gray-800">

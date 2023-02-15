@@ -4,11 +4,8 @@ autor_img: '/images/posts/me_myself.jpg'
 capa: '/images/posts/elogio_ebac.png'
 capa_posts_list: '/images/posts/elogio_ebac_posts_list.png'
 data: '06/05/2022'
-locale: 'pt'
 titulo: 'Elogios ao vivo (Microsserviços)'
-titulo_ingles: 'Live Compliments (Microservices)'
 resumo: 'Durante a correção ao vivo de um desafio com microsserviços pelo instrutor, não esperava ser elogiado.'
-resumo_ingles: "During the instructor's live correction of a microservices challenge, I didn't expect to be praised."
 video: '/files/me/ebac_avaliacao.mp4'
 ---
 
@@ -36,4 +33,4 @@ O que foi usado no evento e no desafio:
 7. Mongoose;
 8. Lerna.
 
-Em tempos de pandemia, muitos eventos online gratuitos estão ocorrendo mensalmente para a promoção de cursos profissionalizantes ou de formação de desenvolvedores Full Stack/DevOps. É uma boa oportunidade para ver quais as tecnologias que as empresas estão esperando conhecimento de seus candidatos no momento. Além disso, também é uma grande oportunidade para fazer networking e ampliar, claro, os próprios conhecimentos. No final de cada evento, são oferecidos descontos e outras vantagens para os interessados. Uma dica que dou é ficar de olho nesses eventos. Falo sério: valem muito a pena.
+Em tempos de pandemia de COVID-19, muitos eventos online gratuitos estão ocorrendo mensalmente para a promoção de cursos profissionalizantes ou de formação de desenvolvedores Full Stack/DevOps. É uma boa oportunidade para ver quais as tecnologias que as empresas estão esperando conhecimento de seus candidatos no momento. Além disso, também é uma grande oportunidade para fazer networking e ampliar, claro, os próprios conhecimentos. No final de cada evento, são oferecidos descontos e outras vantagens para os interessados. Uma dica que dou é ficar de olho nesses eventos. Falo sério: valem muito a pena.

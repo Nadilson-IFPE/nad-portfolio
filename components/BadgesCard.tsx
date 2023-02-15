@@ -1,8 +1,5 @@
-import { NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { StringLiteral } from 'typescript'
 import { useLanguages } from '../hooks/useLanguages'
 
 interface BadgesCardProps {
@@ -16,7 +13,7 @@ const BadgesCard = ({ cardLink, imgSrc, imgAlt }: BadgesCardProps) => {
 
   return (
     <div>
-      <Link href={cardLink} passHref>
+      <Link key={Math.random()} href={cardLink} passHref>
         <a
           className={
             'font-medium tracking-wider no-underline transition-colors hover:text-yellow-500'
@@ -38,7 +35,7 @@ const BadgesCard = ({ cardLink, imgSrc, imgAlt }: BadgesCardProps) => {
             <button
               className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
               onClick={() => {
-                window.open(cardLink, '_blank', 'noopener,noreferrer')
+                // window.open(cardLink, '_blank', 'noopener,noreferrer')
               }}
             >
               {t.cv_page_badges_button_caption}

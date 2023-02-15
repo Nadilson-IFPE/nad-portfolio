@@ -1,18 +1,20 @@
 <h1 align="center">Portfólio de Nadilson</h1>
 
 <p style="text-align: justify; text-justify: inter-word;">
-Este site não é meu primeiro trabalho sério com Next.js, mas é o primeiro a utilizar o framework Tailwind CSS e, portanto, será meu contínuo aprendizado sobre essas tecnologias. Então, o site, que está agora em construção, estará sempre sendo modificado e melhorado conforme mais experiência seja adquirida.
+Este site não é meu primeiro trabalho sério com Next.js, mas é o primeiro a utilizar o framework Tailwind CSS e, portanto, será meu contínuo aprendizado sobre essas tecnologias. Então, o site, que já está bem aprimorado e com suporte a dois idiomas, seguirá sempre sendo modificado e melhorado conforme mais experiência seja adquirida.
 </p>
 
-<h3>Screenshot:</h3>
+<h3>Screenshots:</h3>
 
-![screenshot](https://user-images.githubusercontent.com/11899797/162686983-483141cb-671a-4a70-8184-711cb2426746.png)
+![screenshot1](https://user-images.githubusercontent.com/11899797/218856654-d35f2153-aca6-4cfd-b0fc-07241a560527.png)
+
+![screenshot2](https://user-images.githubusercontent.com/11899797/218861751-d6847a9c-a120-460c-ab61-7f1e5eae1ef0.png)
 
 <h3>Você pode acessar a versão atual neste link:</h3>
 
 https://nadportfolio.vercel.app/
 
-<h6>Nota: o site está pronto, mas vai mudar muito conforme a experiência de desenvolvimento for aumentando.</h6>
+<h6>Nota: o site está pronto, mas vai mudar muito conforme a experiência de desenvolvimento for aumentando. Já tem suporte a dois idiomas, por enquanto.</h6>
 
 <h3>Como instalar e rodar o código em seu computador</h3>
 
@@ -29,6 +31,8 @@ yarn dev
 
 Acesse o site no navegador digitando o seguinte endereço:
 localhost:3000
+
+Obs.: Se não funcionar, preencha as variáveis de ambiente. Há um exemplo no arquivo ".env.local.example".
 
 ```
 
