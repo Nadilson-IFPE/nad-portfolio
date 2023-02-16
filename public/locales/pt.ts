@@ -258,4 +258,9 @@ export default {
   my_500_error_page_error_code: 'Erro 500',
   my_500_error_page_error_description: 'Erro no servidor!',
   my_500_error_page_go_back_link: 'Voltar à página inicial',
+
+  cookie_consent_accept_message:
+    'Este site usa cookies para salvar as informações sobre o idioma selecionado pelo usuário.',
+  cookie_consent_accept_button: 'Eu aceito',
+  cookie_consent_decline_button: 'Eu recuso',
 }

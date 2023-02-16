@@ -12,6 +12,9 @@ import FavIcon from './../components/FavIcon'
 import Script from 'next/script'
 import { useLanguages } from './../hooks/useLanguages'
 import { Analytics } from '@vercel/analytics/react'
+import CookieConsent from 'react-cookie-consent'
+import { CookiesProvider } from 'react-cookie'
+import Router from 'next/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const t = useLanguages()
@@ -95,11 +98,29 @@ function MyApp({ Component, pageProps }: AppProps) {
             onExitComplete={() => window.scrollTo(0, 0)}
           >
             <motion.div initial="initial" animate="animate" exit="exit">
-              <Component {...pageProps} />
+              <CookiesProvider>
+                <Component {...pageProps} />
+              </CookiesProvider>
             </motion.div>
             <Analytics />
           </AnimatePresence>
           <Footer />
+          <CookieConsent
+            cookieName="NEXT_COOKIE_CONSENT"
+            sameSite="none"
+            cookieSecurity
+            location="bottom"
+            enableDeclineButton
+            buttonText={t.cookie_consent_accept_button}
+            declineButtonText={t.cookie_consent_decline_button}
+            expires={31536000} // Cookie expira em um ano: 31536000 (1 hora = 3600; 1 ano = 3600 * 24 * 365)
+            overlay
+            onAccept={() => {
+              Router.reload()
+            }}
+          >
+            {t.cookie_consent_accept_message}
+          </CookieConsent>
         </ThemeProvider>
       </div>
     </>

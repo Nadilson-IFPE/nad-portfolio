@@ -24,20 +24,20 @@ export default {
 
   about_page_title: "Nadilson J. R. Teixeira's personal website - About",
   about_page_greeting: 'Hi there.',
-  about_page_description_p1: `My name is <strong>Nadilson</strong>. I'm a software developer and
-  historian and at the moment, in addition to be looking for a new job,
+  about_page_description_p1: `My name is <strong>Nadilson</strong>. I'm a software developer and a
+  Historian and at the moment, in addition to be looking for a new job,
   I've been investing my free time to &quot;play&quot; with
   several technologies and <em>frameworks</em>, but without forgetting to read
   my books and articles related to the two areas to which I belong.
   I'm also into playing the electric guitar. So much so that I have three, each
   one with a different tuning to play Extreme Metal (<em>Drop C, Drop D</em> and <em>Drop C#</em>).`,
 
-  about_page_description_p2: `This site is not my first serious project with
+  about_page_description_p2: `This website is not my first serious project with
   <strong className="italic">Next.js</strong>, but it is the first to
   use the <em>framework</em>
   <strong className="italic">Tailwind CSS</strong> and therefore
   will be part of my continued learning about these technologies.
-  So the site, which is now under construction, will always be
+  So this website, which is now under construction, will always be
   modified and improved as more experience is gained.`,
 
   about_page_description_p3: `Thank you very much for visiting this project of mine, whose source code
@@ -253,4 +253,9 @@ export default {
   my_500_error_page_error_code: 'Error 500',
   my_500_error_page_error_description: 'Server error!',
   my_500_error_page_go_back_link: 'Go back to home page',
+
+  cookie_consent_accept_message:
+    'This website uses cookies to save information about the language selected by the user.',
+  cookie_consent_accept_button: 'I accept',
+  cookie_consent_decline_button: 'I decline',
 }
