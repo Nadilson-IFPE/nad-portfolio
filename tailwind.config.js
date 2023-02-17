@@ -14,11 +14,12 @@ module.exports = {
         },
       },
       animation: {
-        'spin': 'spin 3s linear infinite',
-        'wiggle': 'wiggle 2s linear infinite'
+        spin: 'spin 3s linear infinite',
+        wiggle: 'wiggle 2s linear infinite',
+        'spin-slow': 'spin 5s linear infinite',
       },
     },
-},
+  },
   plugins: [require('@tailwindcss/typography', '@tailwindcss/aspect-ratio')],
-    variants: { },
+  variants: {},
 }

@@ -24,7 +24,7 @@ const ProjectCard = ({
       id={`${'ProjectCard_'}${indicador}`}
       className="shadow-[0 4px 8px 0 rgba(140, 181, 243, 0.2)] max-w-sm rounded-2xl rounded-t-2xl border border-gray-200 bg-white p-[5px] shadow-lg shadow-indigo-500/50 dark:border-gray-700 dark:bg-gray-800 dark:shadow-indigo-500/50"
     >
-      <div className="shadow-indigo-500/50dark:border-gray-700 max-w-sm overflow-hidden rounded-2xl dark:bg-gray-800">
+      <div className="max-w-sm overflow-hidden rounded-2xl shadow-indigo-500/50 dark:border-gray-700 dark:bg-gray-800">
         <div className="relative content-center items-center overflow-hidden rounded-t-xl bg-blue-400 text-center">
           <img
             className="aspect-auto h-auto w-full max-w-full transform cursor-pointer transition duration-500 ease-in-out hover:scale-150"

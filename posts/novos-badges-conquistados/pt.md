@@ -1,6 +1,7 @@
 ---
 autor: 'Nadilson José'
 autor_img: '/images/posts/me_myself.jpg'
+autor_email: 'nadilson@protonmail.com'
 capa: '/images/posts/iniciativa_devops_badges.png'
 capa_posts_list: '/images/posts/iniciativa_devops_badges_posts_lists.png'
 data: '06/08/2022'

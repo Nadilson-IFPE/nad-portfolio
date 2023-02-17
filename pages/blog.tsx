@@ -63,12 +63,13 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                     <BlogCard
                       key={Math.random()}
                       cardIndex={idx}
-                      cardNumber={precedaComZero(idx + 1)}
+                      cardNumber={precedaComZero(posts.length - idx)}
                       cardImage={`${post.frontmatter.capa_posts_list}`}
                       cardImageAlt={post.frontmatter.titulo}
                       postDate={post.frontmatter.data}
                       author={post.frontmatter.autor}
                       authorImage={post.frontmatter.autor_img}
+                      authorEmail={post.frontmatter.autor_email}
                       title={post.frontmatter.titulo}
                       description={post.frontmatter.resumo}
                       btnLink={`/blog/${encodeURIComponent(post.slug)}`}

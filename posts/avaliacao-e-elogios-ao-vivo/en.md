@@ -1,6 +1,7 @@
 ---
 autor: 'Nadilson José'
 autor_img: '/images/posts/me_myself.jpg'
+autor_email: 'nadilson@protonmail.com'
 capa: '/images/posts/elogio_ebac.png'
 capa_posts_list: '/images/posts/elogio_ebac_posts_list.png'
 data: '06/05/2022'

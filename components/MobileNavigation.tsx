@@ -4,6 +4,11 @@ import { useRef, useState } from 'react'
 import UseOnClickOutside from '../hooks/useOnClickOutside'
 import profile from '../public/images/profile.png'
 import { useLanguages } from '../hooks/useLanguages'
+import home from '../public/images/home.svg'
+import cv from '../public/images/cv.svg'
+import projects from '../public/images/projects.svg'
+import contactme from '../public/images/contact-me.svg'
+import blog from '../public/images/blog.svg'
 
 const MobileNavigation = () => {
   const [showSidebarMenu, setShowSidebarMenu] = useState(false)
@@ -29,19 +34,19 @@ const MobileNavigation = () => {
         `${t.nav_dynamic_error_message}` + '<strong>' + page + '</strong>!'
       targetDiv!.setAttribute(
         'class',
-        'w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white'
+        '.1s block w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out md:-translate-x-0'
       )
       setTimeout(function () {
         targetDiv!.setAttribute(
           'class',
-          'hidden w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white'
+          '-translate-x-full w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out'
         )
-      }, 2000)
+      }, 2500)
     } else {
       window.scroll(0, 0)
       targetDiv!.setAttribute(
         'class',
-        'hidden w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white'
+        '-translate-x-full w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out'
       )
     }
 
@@ -86,7 +91,7 @@ const MobileNavigation = () => {
           // showSidebarMenu ? 'block' : 'hidden'
           // Suavização na abertura do menu mobile
           showSidebarMenu
-            ? '.3s block transition-transform ease-in-out md:-translate-x-0'
+            ? '.1s block transition-transform ease-in-out md:-translate-x-0'
             : '-translate-x-full'
         }`}
       >
@@ -126,9 +131,16 @@ const MobileNavigation = () => {
           {t.main_page_title}
         </p>
 
-        <div className="content-start items-start justify-start">
+        <div className="m-auto content-start items-start justify-start">
           <ul>
-            <li className="p-5">
+            <li className="flex items-center gap-x-2 p-5">
+              <Image
+                className="h-7 w-7 object-cover"
+                src={home}
+                height="30"
+                width="30"
+                objectFit="contain"
+              />
               <Link href="/" passHref scroll={false}>
                 <a
                   className="font-medium uppercase tracking-wider transition-colors duration-300 hover:text-blue-400"
@@ -147,7 +159,14 @@ const MobileNavigation = () => {
               </Link>
             </li>
 
-            <li className="p-5">
+            <li className="flex items-center gap-x-2 p-5">
+              <Image
+                className="h-7 w-7 object-cover"
+                src={cv}
+                height="30"
+                width="30"
+                objectFit="contain"
+              />
               <Link href="/cv" passHref>
                 <a
                   className="transition-colors duration-300 hover:text-blue-400"
@@ -166,7 +185,14 @@ const MobileNavigation = () => {
               </Link>
             </li>
 
-            <li className="p-5">
+            <li className="flex items-center gap-x-2 p-5">
+              <Image
+                className="h-7 w-7 object-cover"
+                src={projects}
+                height="30"
+                width="30"
+                objectFit="contain"
+              />
               <Link href="/projetos" passHref>
                 <a
                   className="transition-colors duration-300 hover:text-blue-400"
@@ -185,7 +211,14 @@ const MobileNavigation = () => {
               </Link>
             </li>
 
-            <li className="p-5">
+            <li className="flex items-center gap-x-2 p-5">
+              <Image
+                className="h-7 w-7 object-cover"
+                src={contactme}
+                height="30"
+                width="30"
+                objectFit="contain"
+              />
               <Link href="/contatos" passHref>
                 <a
                   className="transition-colors duration-300 hover:text-blue-400"
@@ -204,7 +237,14 @@ const MobileNavigation = () => {
               </Link>
             </li>
 
-            <li className="p-5">
+            <li className="flex items-center gap-x-2 p-5">
+              <Image
+                className="h-7 w-7 object-cover"
+                src={blog}
+                height="30"
+                width="30"
+                objectFit="contain"
+              />
               <Link href="/blog" passHref>
                 <a
                   className="transition-colors duration-300 hover:text-blue-400"

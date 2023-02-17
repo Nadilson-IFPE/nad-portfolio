@@ -10,6 +10,7 @@ interface BlogCardProps {
   postDate: string
   author?: string
   authorImage?: string
+  authorEmail?: string
   title: string
   description: string
   btnLink: string
@@ -24,6 +25,7 @@ const BlogCard = ({
   postDate,
   author,
   authorImage,
+  authorEmail,
   title,
   description,
   btnLink,
@@ -55,18 +57,25 @@ const BlogCard = ({
             {postDate}
           </div>
           <div className="bg-[#f4f4f4] p-2 dark:bg-slate-200 dark:text-black">
-            <div className="flex-cols-2 flex md:flex-row">
+            <div className="flex items-center gap-x-2">
               <div>
                 <strong>{t.blogcard_author_name} </strong>
-                {author}
               </div>
               <img
-                className="ml-2 rounded-full"
+                className="h-7 w-7 rounded-full object-cover"
                 src={authorImage}
                 height="30"
                 width="30"
                 alt={author}
               />
+              <div>
+                <h2 className="text-sm font-medium text-gray-800 dark:text-white ">
+                  {author}
+                </h2>
+                <p className="text-xs font-normal text-gray-600 dark:text-gray-400">
+                  {authorEmail}
+                </p>
+              </div>
             </div>
           </div>
 

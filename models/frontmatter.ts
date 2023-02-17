@@ -1,6 +1,7 @@
 interface Frontmatter {
   autor?: string
   autor_img?: string
+  autor_email?: string
   capa?: string
   capa_posts_list?: string
   data: string
