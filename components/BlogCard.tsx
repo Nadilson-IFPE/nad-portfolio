@@ -15,6 +15,7 @@ interface BlogCardProps {
   description: string
   btnLink: string
   btnText: string
+  post_reading_time?: string
 }
 
 const BlogCard = ({
@@ -30,6 +31,7 @@ const BlogCard = ({
   description,
   btnLink,
   btnText,
+  post_reading_time
 }: BlogCardProps) => {
   const t = useLanguages()
 
@@ -53,13 +55,15 @@ const BlogCard = ({
             </h1>
           </div>
           <div className="bg-[#f4f4f4] p-2 dark:bg-slate-200 dark:text-black">
-            <strong>{t.blogcard_post_date} </strong>
+            <strong className='font-semibold'>{t.blogcard_post_date} </strong>
             {postDate}
+            <strong className='px-1'>-</strong>
+            <strong className='font-light'>{post_reading_time}</strong>
           </div>
           <div className="bg-[#f4f4f4] p-2 dark:bg-slate-200 dark:text-black">
             <div className="flex items-center gap-x-2">
               <div>
-                <strong>{t.blogcard_author_name} </strong>
+                <strong className='font-semibold'>{t.blogcard_author_name} </strong>
               </div>
               <img
                 className="h-7 w-7 rounded-full object-cover"
@@ -75,6 +79,9 @@ const BlogCard = ({
                 <p className="text-xs font-normal text-gray-600 dark:text-gray-400">
                   {authorEmail}
                 </p>
+                {/* <p className="text-xs font-bold text-black dark:text-gray-400">
+                  teste
+                </p> */}
               </div>
             </div>
           </div>

@@ -13,6 +13,7 @@ import {
   TopToBottomAnimation,
 } from '../components/Animations'
 import { useRouter } from 'next/router'
+import timeToReadText from '../helpers/timeToReadText'
 
 type BlogProps = {
   posts: Array<Post>
@@ -37,8 +38,20 @@ function precedaComZero(numero: number) {
   return (numero < 10 ? '0' : '') + numero
 }
 
+function estimatedReadingTime(text: string, locale: string | undefined) {
+  const resultado = timeToReadText(text);
+
+  if (locale === 'pt') {
+    return resultado === '1' ? resultado + ' minuto de leitura' : resultado + ' minutos de leitura';
+  } else {
+    return resultado === '1' ? resultado + ' minute of reading' : resultado + ' minutes of reading';
+  }
+}
+
 const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
   const t = useLanguages()
+  const { locale } = useRouter()
+
   return (
     <>
       <Head>
@@ -74,6 +87,7 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                       description={post.frontmatter.resumo}
                       btnLink={`/blog/${encodeURIComponent(post.slug)}`}
                       btnText={t.blogcard_button_caption}
+                      post_reading_time={estimatedReadingTime(post.content, locale)}
                     />
                   )
                 })}
@@ -121,7 +135,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
           post2: { frontmatter: { data: string | number | Date } }
         ) =>
           new Date(post1.frontmatter.data).toLocaleDateString('pt-BR') >
-          new Date(post2.frontmatter.data).toLocaleDateString('pt-BR')
+            new Date(post2.frontmatter.data).toLocaleDateString('pt-BR')
             ? -1
             : 1
       ),
