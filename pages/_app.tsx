@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import SEO from '../next-seo.config'
 import '../styles/globals.css'
+import '../styles/photo.animations.css'
 import type { AppProps } from 'next/app'
 import 'tailwindcss/tailwind.css'
 import Navigation from '../components/Navigation'

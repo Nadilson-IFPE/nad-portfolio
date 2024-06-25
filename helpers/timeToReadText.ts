@@ -6,7 +6,8 @@ export default function timeToReadText(text: string) {
 }
 
 
-// Paa saber mais sobre mínimo de palavras que um adulto lê por minuto:
+// Para saber mais sobre mínimo de palavras que um adulto lê por minuto:
+// To learn more about the minimum number of words an adult reads per minute:
 
 // https://medium.com/blogging-guide/how-is-medium-article-read-time-calculated-924420338a85
 

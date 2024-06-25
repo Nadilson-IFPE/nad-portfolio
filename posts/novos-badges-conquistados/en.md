@@ -1,13 +1,13 @@
 ---
-autor: 'Nadilson José'
-autor_img: '/images/posts/me_myself.jpg'
-autor_email: 'nadilson@protonmail.com'
-capa: '/images/posts/iniciativa_devops_badges.png'
-capa_posts_list: '/images/posts/iniciativa_devops_badges_posts_lists.png'
-data: '06/08/2022'
-titulo: 'New badges earned'
-resumo: 'I won 5 badges by delivering the challenges of an online training, the Iniciativa DevOps.'
-video: ''
+post_author: 'Nadilson José'
+post_author_img: '/images/posts/me_myself.png'
+post_author_email: 'nadilson@protonmail.com'
+post_cover: '/images/posts/iniciativa_devops_badges.png'
+post_thumbnail: '/images/posts/iniciativa_devops_badges_thumbnail.png'
+post_date: '06/08/2022'
+post_title: 'New badges earned'
+post_summary: 'I won 5 badges by delivering the challenges of an online training, the Iniciativa DevOps.'
+post_video: ''
 ---
 
 A few days ago, I was following the event [Iniciativa DevOps](https://iniciativadevops.com.br/), promoted by KubeDev and taught by [Fabricio Veronez](https://www.linkedin.com/in/fabricioveronez) , from [Formação DevOps Pro](https://www.linkedin.com/company/devopspro/). The event, according to the description on the official website, was "an immersion of content with the aim of showing the developer a practical method to stand out in the market as a DevOps specialist and conquer one of the most desired and well-paid profiles". Nothing more true. Currently, DevOps is on the rise and there is no shortage of jobs.

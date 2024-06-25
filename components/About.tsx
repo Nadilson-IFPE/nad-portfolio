@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import profile from '../public/images/profile.png'
 import linkedin from '../public/images/linkedin.png'
@@ -8,12 +8,22 @@ import instagram from '../public/images/instagram.png'
 import twitter from '../public/images/twitter.png'
 import whatsapp from '../public/images/whatsapp.png'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { useLanguages } from '../hooks/useLanguages'
 import { RotateZAnimation, ShowTextAnimation } from './Animations'
+import { useRouter } from 'next/router'
+
 
 const About = () => {
   const t = useLanguages()
+
+  const { asPath } = useRouter()
+  const pageName = asPath.slice(asPath.indexOf('/') + 1)
+
+  useEffect(() => {
+    fetch(`/api/pageviews/${pageName}`, {
+      method: "POST",
+    });
+  }, [pageName]);
 
   return (
     <div className="mx-auto px-4">
@@ -47,18 +57,22 @@ const About = () => {
           </ShowTextAnimation>
         </div>
 
+        <RotateZAnimation>
+
         <div className="flex-shrink-0 lg:mt-12 lg:px-4">
-          <RotateZAnimation>
-            <Image
+
+          <div className='image-content' />
+
+            {/* <Image
               src={profile}
               alt="Nadilson José Rodrigues Teixeira"
               priority={true}
-              width={250}
-              height={250}
+              width={200}
+              height={200}
               placeholder="blur"
-            />
+            /> */}
 
-            <div className="mt-1 flex justify-center">
+            <div className="mt-3 flex justify-center">
               <div className="flex space-x-4 font-medium text-gray-800 dark:text-white sm:block md:flex lg:flex">
                 <Link
                   href="https://br.linkedin.com/in/nadilson-teixeira/"
@@ -205,8 +219,8 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </RotateZAnimation>
         </div>
+        </RotateZAnimation>
       </div>
     </div>
   )

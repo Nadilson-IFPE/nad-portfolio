@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useLanguages } from '../hooks/useLanguages'
+import Image from 'next/image'
 
 interface BlogCardProps {
   key: number
@@ -9,13 +10,13 @@ interface BlogCardProps {
   cardImageAlt?: string
   postDate: string
   author?: string
-  authorImage?: string
+  authorImage: string
   authorEmail?: string
   title: string
   description: string
   btnLink: string
   btnText: string
-  post_reading_time?: string
+  postReadingTime?: string
 }
 
 const BlogCard = ({
@@ -31,7 +32,7 @@ const BlogCard = ({
   description,
   btnLink,
   btnText,
-  post_reading_time
+  postReadingTime
 }: BlogCardProps) => {
   const t = useLanguages()
 
@@ -39,15 +40,17 @@ const BlogCard = ({
     <Link key={cardIndex} href={btnLink} passHref>
       <article
         id={`${'BlogCard_'}${cardNumber}`}
-        key={Math.random()}
+        key={cardIndex}
         className="shadow-[0 4px 8px 0 rgba(140, 181, 243, 0.2)] max-w-sm rounded-2xl rounded-t-2xl border border-gray-200 bg-white p-[5px] shadow-lg shadow-indigo-500/50 dark:border-gray-700 dark:bg-gray-800 dark:shadow-indigo-500/50"
       >
         <div className="shadow-indigo-500/50dark:border-gray-700 max-w-sm overflow-hidden rounded-2xl dark:bg-gray-800">
           <div className="relative content-center items-center overflow-hidden rounded-t-xl bg-blue-400 text-center">
-            <img
+            <Image
               className="aspect-auto h-auto max-w-full transform cursor-pointer transition duration-500 ease-in-out hover:scale-150"
               src={cardImage}
               alt={cardImageAlt}
+              width={400}
+              height={333}
             />
 
             <h1 className="absolute top-0 left-0 content-center items-center bg-red-900 px-2 py-1 text-center text-xl font-bold text-white shadow shadow-black">
@@ -55,33 +58,29 @@ const BlogCard = ({
             </h1>
           </div>
           <div className="bg-[#f4f4f4] p-2 dark:bg-slate-200 dark:text-black">
-            <strong className='font-semibold'>{t.blogcard_post_date} </strong>
-            {postDate}
+            <strong className='font-semibold text-sm'>{t.blogcard_post_date}<span className='font-normal'>{postDate}</span></strong>
             <strong className='px-1'>-</strong>
-            <strong className='font-light'>{post_reading_time}</strong>
+            <strong className='font-light text-sm'>{postReadingTime}</strong>
           </div>
           <div className="bg-[#f4f4f4] p-2 dark:bg-slate-200 dark:text-black">
             <div className="flex items-center gap-x-2">
               <div>
-                <strong className='font-semibold'>{t.blogcard_author_name} </strong>
+                <strong className='font-semibold text-sm'>{t.blogcard_author_name} </strong>
               </div>
-              <img
+              <Image
                 className="h-7 w-7 rounded-full object-cover"
-                src={authorImage}
-                height="30"
-                width="30"
+                src={authorImage}                
+                width={50}
+                height={50}
                 alt={author}
               />
               <div>
-                <h2 className="text-sm font-medium text-gray-800 dark:text-white ">
+                <h2 className="text-sm font-medium text-gray-800">
                   {author}
                 </h2>
                 <p className="text-xs font-normal text-gray-600 dark:text-gray-400">
                   {authorEmail}
                 </p>
-                {/* <p className="text-xs font-bold text-black dark:text-gray-400">
-                  teste
-                </p> */}
               </div>
             </div>
           </div>

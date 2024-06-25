@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRef, useState } from 'react'
 import UseOnClickOutside from '../hooks/useOnClickOutside'
-import profile from '../public/images/profile.png'
+import nav_icon from '../public/images/nav_icon.png'
 import { useLanguages } from '../hooks/useLanguages'
 import home from '../public/images/home.svg'
 import cv from '../public/images/cv.svg'
@@ -60,8 +60,8 @@ const MobileNavigation = () => {
   return (
     <>
       {/* Botão hamburguer para o menu para dispositivos móveis */}
-      <div className="top-0 left-0 flex flex-col space-y-2 rounded p-4 shadow dark:bg-slate-900 md:hidden lg:hidden xl:hidden 2xl:hidden">
-        <button className="mobile-menu-button block" onClick={handleClick}>
+      <div className="top-0 left-0 flex flex-col space-y-2 rounded p-4 shadow dark:bg-slate-900 sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden">
+        <button className="block" onClick={handleClick}>
           <svg
             className="h-6 w-6 fill-current"
             xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ const MobileNavigation = () => {
       {/* Menu para dispositivos móveis */}
       <div
         ref={myRef}
-        className={`mobile-menu fixed top-0 left-0 bottom-0 z-50 flex w-4/6 max-w-sm transform flex-col content-start overflow-y-auto border-r bg-[#b9c1e0] px-6 py-6 text-center transition duration-500 ease-in-out dark:bg-[#1c1b22] dark:text-white sm:text-left md:hidden lg:hidden xl:hidden 2xl:hidden ${
+        className={`fixed top-0 left-0 bottom-0 z-50 flex w-4/6 max-w-sm transform flex-col content-start overflow-y-auto border-r bg-[#b9c1e0] px-6 py-6 text-center transition duration-500 ease-in-out dark:bg-[#1c1b22] dark:text-white sm:text-left sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden ${
           // showSidebarMenu ? 'block' : 'hidden'
           // Suavização na abertura do menu mobile
           showSidebarMenu
@@ -117,7 +117,7 @@ const MobileNavigation = () => {
 
         <div className="content-center">
           <Image
-            src={profile}
+            src={nav_icon}
             alt="Nadilson José Rodrigues Teixeira"
             priority={true}
             className="float-center rounded-full"
@@ -135,7 +135,7 @@ const MobileNavigation = () => {
           <ul>
             <li className="flex items-center gap-x-2 p-5">
               <Image
-                className="h-7 w-7 object-cover"
+                className="h-7 w-7 object-cover dark:invert"
                 src={home}
                 height="30"
                 width="30"
@@ -143,7 +143,7 @@ const MobileNavigation = () => {
               />
               <Link href="/" passHref scroll={false}>
                 <a
-                  className="font-medium uppercase tracking-wider transition-colors duration-300 hover:text-blue-400"
+                  className="font-medium uppercase tracking-wider transition-colors duration-200 hover:text-[#ffb800]"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -161,7 +161,7 @@ const MobileNavigation = () => {
 
             <li className="flex items-center gap-x-2 p-5">
               <Image
-                className="h-7 w-7 object-cover"
+                className="h-7 w-7 object-cover dark:invert"
                 src={cv}
                 height="30"
                 width="30"
@@ -169,7 +169,7 @@ const MobileNavigation = () => {
               />
               <Link href="/cv" passHref>
                 <a
-                  className="transition-colors duration-300 hover:text-blue-400"
+                  className="transition-colors tracking-wider duration-200 hover:text-[#ffb800]"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -187,7 +187,7 @@ const MobileNavigation = () => {
 
             <li className="flex items-center gap-x-2 p-5">
               <Image
-                className="h-7 w-7 object-cover"
+                className="h-7 w-7 object-cover dark:invert"
                 src={projects}
                 height="30"
                 width="30"
@@ -195,7 +195,7 @@ const MobileNavigation = () => {
               />
               <Link href="/projetos" passHref>
                 <a
-                  className="transition-colors duration-300 hover:text-blue-400"
+                  className="transition-colors tracking-wider duration-200 hover:text-[#ffb800]"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -213,7 +213,7 @@ const MobileNavigation = () => {
 
             <li className="flex items-center gap-x-2 p-5">
               <Image
-                className="h-7 w-7 object-cover"
+                className="h-7 w-7 object-cover dark:invert"
                 src={contactme}
                 height="30"
                 width="30"
@@ -221,7 +221,7 @@ const MobileNavigation = () => {
               />
               <Link href="/contatos" passHref>
                 <a
-                  className="transition-colors duration-300 hover:text-blue-400"
+                  className="transition-colors tracking-wider duration-200 hover:text-[#ffb800]"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -239,7 +239,7 @@ const MobileNavigation = () => {
 
             <li className="flex items-center gap-x-2 p-5">
               <Image
-                className="h-7 w-7 object-cover"
+                className="h-7 w-7 object-cover dark:invert"
                 src={blog}
                 height="30"
                 width="30"
@@ -247,7 +247,7 @@ const MobileNavigation = () => {
               />
               <Link href="/blog" passHref>
                 <a
-                  className="transition-colors duration-300 hover:text-blue-400"
+                  className="transition-colors tracking-wider duration-200 hover:text-[#ffb800]"
                   rel="noreferrer"
                   onClick={(e) =>
                     handleClickOnLink(
@@ -265,9 +265,9 @@ const MobileNavigation = () => {
           </ul>
         </div>
 
-        <p className="mt-auto text-xs text-gray-400">
+        <p className="mt-auto text-xs text-gray-400 text-center">
           <span>
-            &copy; {new Date().getFullYear()} - Nadilson J. R. Teixeira
+            &copy; 2022-{new Date().getFullYear()} - Nadilson J. R. Teixeira
           </span>
         </p>
       </div>

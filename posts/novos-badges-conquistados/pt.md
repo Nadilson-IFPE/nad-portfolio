@@ -1,13 +1,13 @@
 ---
-autor: 'Nadilson José'
-autor_img: '/images/posts/me_myself.jpg'
-autor_email: 'nadilson@protonmail.com'
-capa: '/images/posts/iniciativa_devops_badges.png'
-capa_posts_list: '/images/posts/iniciativa_devops_badges_posts_lists.png'
-data: '06/08/2022'
-titulo: 'Novos badges conquistados'
-resumo: 'Conquistei 5 badges ao entregar os desafios de um treinamento online, o Iniciativa DevOps.'
-video: ''
+post_author: 'Nadilson José'
+post_author_img: '/images/posts/me_myself.png'
+post_author_email: 'nadilson@protonmail.com'
+post_cover: '/images/posts/iniciativa_devops_badges.png'
+post_thumbnail: '/images/posts/iniciativa_devops_badges_thumbnail.png'
+post_date: '06/08/2022'
+post_title: 'Novos badges conquistados'
+post_summary: 'Conquistei 5 badges ao entregar os desafios de um treinamento online, o Iniciativa DevOps.'
+post_video: ''
 ---
 
 Há alguns dias, estive acompanhando o envento [Iniciativa DevOps](https://iniciativadevops.com.br/), promovido pela KubeDev e ministrado pelo [Fabricio Veronez](https://www.linkedin.com/in/fabricioveronez), da [Formação DevOps Pro](https://www.linkedin.com/company/devopspro/). O evento, segundo a própria descrição no site oficial, se tratou de "uma imersão de conteúdo com o intuito de mostrar ao desenvolvedor um método prático para se destacar no mercado como especialista em DevOps e conquistar um dos perfis mais desejados e bem remunerados". Nada mais verdadeiro. Atualmente, DevOps está em alta e não falta emprego.

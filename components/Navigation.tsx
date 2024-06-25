@@ -2,18 +2,19 @@ import Link from 'next/link'
 import React from 'react'
 import ThemeSwitch from './ThemeSwitch'
 import Image from 'next/image'
-import profile from '../public/images/profile.png'
+import nav_icon from '../public/images/nav_icon.png'
 import MobileNavigation from './MobileNavigation'
 import LanguageSelector from './LanguageSelector'
 import ThreeDotsDivider from './ThreeDotsDivider'
 import { useLanguages } from '../hooks/useLanguages'
+import ToastDiv from './ToastDiv'
 
 // const getLastItem = (myPage: string) =>
 //   myPage.substring(myPage.lastIndexOf('/') + 1)
 
 const Navigation = () => {
   // const [navText, setNavText] = useState('')
-  const t = useLanguages()
+  const t = useLanguages();
 
   const handleClickOnLink = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -21,14 +22,14 @@ const Navigation = () => {
     myDiv: string,
     page: string
   ) => {
-    let targetDiv = document.getElementById(myDiv)
-    let targetParagraph = document.getElementById('paragraph')
+    let targetDiv = document.getElementById(myDiv);
+    let targetParagraph = document.getElementById('paragraph');
 
     if (path === window.location.href) {
-      e.preventDefault()
-      window.scroll(0, 0)
-      targetParagraph!.innerHTML =
-        `${t.nav_dynamic_error_message}` + '<strong>' + page + '</strong>!'
+      e.preventDefault();
+      window.scroll(0, 0);
+      targetParagraph!.innerHTML = 
+        `${t.nav_dynamic_error_message}` + '<strong>' + page + '</strong>!';
       targetDiv!.setAttribute(
         'class',
         '.1s block w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out md:-translate-x-0'
@@ -51,14 +52,14 @@ const Navigation = () => {
   return (
     <>
       <div className="sticky top-0 z-50 mr-auto content-center items-center justify-between overflow-hidden bg-[#b9c1e0] p-2 text-center dark:bg-black">
-        <div className="sticky flex content-center items-center justify-between px-4 text-center">
+        <div className="sticky flex content-center items-center justify-between px-4 text-center lg:max-w-4xl mx-auto">
           {/* Menu para dispositivos móveis */}
           <MobileNavigation />
 
           {/* Menu  para PCs e dispositivos com tela grande*/}
           <Link href="/" passHref scroll={false}>
             <a
-              className="invisible font-medium uppercase tracking-wider transition-colors hover:text-yellow-500 md:visible lg:visible xl:visible 2xl:visible"
+              className="invisible font-medium uppercase tracking-wider transition-colors hover:text-yellow-500 sm:visible md:visible lg:visible xl:visible 2xl:visible"
               onClick={(e) => {
                 //  setNavText(t.nav_home)
                 handleClickOnLink(
@@ -70,7 +71,7 @@ const Navigation = () => {
               }}
             >
               <Image
-                src={profile}
+                src={nav_icon}
                 alt="Nadilson José Rodrigues Teixeira"
                 priority={true}
                 className="rounded-full transition-colors"
@@ -96,7 +97,7 @@ const Navigation = () => {
             <div className="hidden flex-wrap space-x-2 pt-2 font-medium sm:flex md:visible lg:visible lg:pt-0 xl:visible 2xl:visible">
               <Link href="/cv" passHref>
                 <a
-                  className="transition-colors hover:text-yellow-500"
+                  className="transition-colors tracking-wider duration-200 hover:text-yellow-500"
                   rel="noreferrer"
                   onClick={(e) => {
                     //   setNavText(t.nav_cv)
@@ -116,7 +117,7 @@ const Navigation = () => {
 
               <Link href="/projetos" passHref>
                 <a
-                  className="transition-colors hover:text-yellow-500"
+                  className="transition-colors tracking-wider duration-200 hover:text-yellow-500"
                   rel="noreferrer"
                   onClick={(e) => {
                     //  setNavText(t.nav_projects)
@@ -136,7 +137,7 @@ const Navigation = () => {
 
               <Link href="/contatos" passHref>
                 <a
-                  className="transition-colors hover:text-yellow-500"
+                  className="transition-colors tracking-wider duration-200 hover:text-yellow-500"
                   rel="noreferrer"
                   onClick={(e) => {
                     //  setNavText(t.nav_contact)
@@ -156,7 +157,7 @@ const Navigation = () => {
 
               <Link href="/blog" passHref>
                 <a
-                  className="transition-colors hover:text-yellow-500"
+                  className="transition-colors tracking-wider duration-200 hover:text-yellow-500"
                   rel="noreferrer"
                   onClick={(e) => {
                     //  setNavText(t.nav_blog)
@@ -183,7 +184,7 @@ const Navigation = () => {
       </div>
 
       {/* Mensagem acima do título da página: */}
-      <div
+      {/* <div
         id="toast-div"
         className="-translate-x-full w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out"
         role="alert"
@@ -191,7 +192,8 @@ const Navigation = () => {
         <p id="paragraph" className="text-center">
           {t.nav_error_message}
         </p>
-      </div>
+      </div> */}
+      <ToastDiv message={t.nav_error_message} id={'toast-div'} p_id={'paragraph'} />
     </>
   )
 }

@@ -1,13 +1,13 @@
 ---
-autor: 'Nadilson José'
-autor_img: '/images/posts/me_myself.jpg'
-autor_email: 'nadilson@protonmail.com'
-capa: '/images/posts/elogio_ebac.png'
-capa_posts_list: '/images/posts/elogio_ebac_posts_list.png'
-data: '06/05/2022'
-titulo: 'Elogios ao vivo (Microsserviços)'
-resumo: 'Durante a correção ao vivo de um desafio com microsserviços pelo instrutor, não esperava ser elogiado.'
-video: '/files/me/ebac_avaliacao.mp4'
+post_author: 'Nadilson José'
+post_author_img: '/images/posts/me_myself.png'
+post_author_email: 'nadilson@protonmail.com'
+post_cover: '/images/posts/elogio_ebac.png'
+post_thumbnail: '/images/posts/elogio_ebac_thumbnail.png'
+post_date: '06/05/2022'
+post_title: 'Elogios ao vivo (Microsserviços)'
+post_summary: 'Durante a correção ao vivo de um desafio com microsserviços pelo instrutor, não esperava ser elogiado.'
+post_video: '/files/me/ebac_avaliacao.mp4'
 ---
 
 Durante o evento online gratuito sobre Microsserviços promovido pela **EBAC - Escola Britânica de Artes Criativas e Tecnologia**, o instrutor **Guilherme Dalleprane** - por sinal, dono de uma excelente didática - lançou um desafio para quem estava prestigiando os três dias de aulas. No dia seguinte, fez uma correção ao vivo dos desafios que foram entregues devidamente resolvidos. Fiquei surpreso quando chegou a minha vez. Você pode assistir ao vídeo a seguir. É possível assisti-lo em tela cheia.

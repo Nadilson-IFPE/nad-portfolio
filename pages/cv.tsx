@@ -50,7 +50,7 @@ async function downloadCV() {
   anchor.href = meuCVBlobURL
   anchor.rel = 'noopener, noreferrer'
   anchor.target = '_blank'
-  anchor.download = 'Nadilson_José_Rodrigues_Teixeira_-_CV_-_2023.pdf'
+  anchor.download = 'Nadilson_José_Rodrigues_Teixeira_-_CV_-_2024.pdf'
 
   document.body.appendChild(anchor)
   anchor.click()
@@ -80,7 +80,7 @@ async function downloadCVInEnglish() {
   anchor.href = meuCVBlobURL
   anchor.rel = 'noopener, noreferrer'
   anchor.target = '_blank'
-  anchor.download = 'Nadilson_José_Rodrigues_Teixeira_-_CV_-_2023_-_English.pdf'
+  anchor.download = 'Nadilson_José_Rodrigues_Teixeira_-_CV_-_2024_-_English.pdf'
 
   document.body.appendChild(anchor)
   anchor.click()
@@ -120,330 +120,333 @@ const CV: NextPage = () => {
   //  console.info(`Idiomas disponíveis no site são: ${router.locales}`)
 
   return (
-    <div className="mx-auto flex flex-1 justify-center space-y-14 px-4 pt-5 lg:space-y-24">
+    <>
       <Head>
         <title>{t.cv_page_title}</title>
         <FavIcon />
       </Head>
 
-      <div className="item-center flex min-h-screen flex-col lg:-mx-4 lg:flex lg:flex-row lg:space-x-5 lg:text-left">
-        <div className="shadow-indigo-500/50 lg:mt-12 lg:px-4">
-          <RightToLeftAnimation>
-            <h1 className="text-center text-2xl font-bold text-gray-900 underline decoration-sky-300 decoration-wavy underline-offset-8 dark:text-white lg:text-4xl">
-              {t.cv_page_header}
-            </h1>
-          </RightToLeftAnimation>
-          <br />
-          <BottomToTopAnimation>
-            <div className="bg-[#eeebeb] shadow-lg shadow-indigo-500/50 dark:shadow-indigo-500/50">
-              <h3 className="prose p-4 text-justify dark:text-black">
-                {t.cv_page_info1}
-                <a
-                  className={
-                    'font-medium tracking-wider text-red-800 underline decoration-sky-300 decoration-wavy underline-offset-4 transition-colors'
-                  }
-                  /* onClick={(e) => downloadCV(e, 'download')} */
-                  onClick={() => downloadCV()}
-                >
-                  <strong className="cursor-pointer text-red-600 hover:text-blue-600">
-                    {t.cv_page_info2}
-                  </strong>
-                </a>
-                {t.cv_page_info3}
-                <a
-                  className={
-                    'font-medium tracking-wider text-red-800 underline decoration-sky-300 decoration-wavy underline-offset-4 transition-colors'
-                  }
-                  /* onClick={(e) => downloadCV(e, 'download')} */
-                  onClick={() => downloadCVInEnglish()}
-                >
-                  <strong className="cursor-pointer text-red-600 hover:text-blue-600">
-                    {t.cv_page_info4}
-                  </strong>
-                </a>
-                {t.cv_page_info5}
-              </h3>
-            </div>
-          </BottomToTopAnimation>
+      <div className="mx-auto flex flex-1 justify-center space-y-14 px-4 pt-5 lg:space-y-24">
 
-          <br />
+        <div className="item-center flex min-h-screen flex-col lg:-mx-4 lg:flex lg:flex-row lg:space-x-5 lg:text-left">
+          <div className="shadow-indigo-500/50 lg:mt-2 lg:px-4">
+            <RightToLeftAnimation>
+              <h1 className="text-center text-2xl font-bold text-gray-900 underline decoration-sky-300 decoration-wavy underline-offset-8 dark:text-white lg:text-4xl">
+                {t.cv_page_header}
+              </h1>
+            </RightToLeftAnimation>
+            <br />
+            <BottomToTopAnimation>
+              <div className="bg-[#eeebeb] shadow-lg shadow-indigo-500/50 dark:shadow-indigo-500/50">
+                <h3 className="prose p-4 text-justify dark:text-black">
+                  {t.cv_page_info1}
+                  <a
+                    className={
+                      'font-medium tracking-wider text-red-800 underline decoration-sky-300 decoration-wavy underline-offset-4 transition-colors'
+                    }
+                    /* onClick={(e) => downloadCV(e, 'download')} */
+                    onClick={() => downloadCV()}
+                  >
+                    <strong className="cursor-pointer text-red-600 hover:text-blue-600">
+                      {t.cv_page_info2}
+                    </strong>
+                  </a>
+                  {t.cv_page_info3}
+                  <a
+                    className={
+                      'font-medium tracking-wider text-red-800 underline decoration-sky-300 decoration-wavy underline-offset-4 transition-colors'
+                    }
+                    /* onClick={(e) => downloadCV(e, 'download')} */
+                    onClick={() => downloadCVInEnglish()}
+                  >
+                    <strong className="cursor-pointer text-red-600 hover:text-blue-600">
+                      {t.cv_page_info4}
+                    </strong>
+                  </a>
+                  {t.cv_page_info5}
+                </h3>
+              </div>
+            </BottomToTopAnimation>
 
-          <div className="text-gray-800">
-            <article className="lg:prose-x1 accordion-section prose dark:text-black">
-              <RotateZAnimation>
-                <DetailsSection
-                  title={t.cv_page_objective_header}
-                  text={t.cv_page_objective_description}
-                />
+            <br />
 
-                <DetailsSection
-                  title={t.cv_page_skills_header}
-                  text={t.cv_page_skills_description}
-                />
+            <div className="text-gray-800">
+              <article className="lg:prose-x1 accordion-section prose dark:text-black">
+                <RotateZAnimation>
+                  <DetailsSection
+                    title={t.cv_page_objective_header}
+                    text={t.cv_page_objective_description}
+                  />
 
-                <DetailsSection
-                  title={t.cv_page_education_header}
-                  text={t.cv_page_education_description}
-                />
+                  <DetailsSection
+                    title={t.cv_page_skills_header}
+                    text={t.cv_page_skills_description}
+                  />
 
-                <DetailsSection
-                  title={t.cv_page_work_history_header}
-                  text={t.cv_page_work_history_description}
-                />
+                  <DetailsSection
+                    title={t.cv_page_education_header}
+                    text={t.cv_page_education_description}
+                  />
 
-                <details className="group mb-4 rounded-xl bg-[#ccd2e7] shadow-lg shadow-indigo-500/50 dark:shadow-indigo-500/50">
-                  <summary
-                    className="lg:prose-x1 prose relative flex cursor-pointer list-none flex-wrap items-center
+                  <DetailsSection
+                    title={t.cv_page_work_history_header}
+                    text={t.cv_page_work_history_description}
+                  />
+
+                  <details className="group mb-4 rounded-xl bg-[#ccd2e7] shadow-lg shadow-indigo-500/50 dark:shadow-indigo-500/50">
+                    <summary
+                      className="lg:prose-x1 prose relative flex cursor-pointer list-none flex-wrap items-center
                      rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-blue-300
                       group-open:z-[1] group-open:rounded-b-none"
-                  >
-                    <h1 className="lg:prose-x1 prose flex flex-1 select-none rounded-xl bg-[#ccd2e7] p-4">
-                      {t.cv_page_certifications_header}
-                    </h1>
-                    <div className="flex-w-10 items-center justify-center">
-                      <div className="ml-2 origin-left border-8 border-transparent border-l-gray-600 transition-transform group-open:rotate-90" />
-                    </div>
-                  </summary>
-                  <p className="mb-4 rounded-b-xl bg-[#e7eaf7] p-4">
-                    <CertificationsCard
-                      title={t.cv_page_certifications_title1}
-                      subtitle={t.cv_page_certifications_subtitle1}
-                      img={certiprof.src}
-                      imgAlt={
-                        'Scrum Foundation Professional Certificate (SFPC)'
-                      }
-                    />
+                    >
+                      <h1 className="lg:prose-x1 prose flex flex-1 select-none rounded-xl bg-[#ccd2e7] p-4">
+                        {t.cv_page_certifications_header}
+                      </h1>
+                      <div className="flex-w-10 items-center justify-center">
+                        <div className="ml-2 origin-left border-8 border-transparent border-l-gray-600 transition-transform group-open:rotate-90" />
+                      </div>
+                    </summary>
+                    <p className="mb-4 rounded-b-xl bg-[#e7eaf7] p-4">
+                      <CertificationsCard
+                        title={t.cv_page_certifications_title1}
+                        subtitle={t.cv_page_certifications_subtitle1}
+                        img={certiprof.src}
+                        imgAlt={
+                          'Scrum Foundation Professional Certificate (SFPC)'
+                        }
+                      />
 
-                    <CertificationsCard
-                      title={t.cv_page_certifications_title2}
-                      subtitle={t.cv_page_certifications_subtitle2}
-                      img={certiprof_new.src}
-                      imgAlt={
-                        'Scrum Foundation Professional Certificate (SFPC)'
-                      }
-                    />
-                  </p>
-                </details>
-
-                <br />
-
-                <div className="dark:border-white-300 mb-2 border-t-2 border-gray-300 pb-8" />
-
-                <details className="group mb-4 rounded-xl bg-[#ccd2e7] shadow-lg shadow-indigo-500/50 dark:shadow-indigo-500/50">
-                  <summary
-                    className="lg:prose-x1 prose relative flex cursor-pointer list-none flex-wrap items-center
-                     rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-blue-300
-                      group-open:z-[1] group-open:rounded-b-none"
-                  >
-                    <h1 className="lg:prose-x1 prose flex flex-1 select-none rounded-xl bg-[#ccd2e7] p-4">
-                      {t.cv_page_badges_header}
-                    </h1>
-                    <div className="flex-w-10 items-center justify-center">
-                      <div className="ml-2 origin-left border-8 border-transparent border-l-gray-600 transition-transform group-open:rotate-90" />
-                    </div>
-                  </summary>
-                  <div className="rounded-b-xl bg-[#e7eaf7]">
-                    <p className="mb-4 bg-[#e7eaf7] p-4 text-justify">
-                      {t.cv_page_badges_description}
+                      <CertificationsCard
+                        title={t.cv_page_certifications_title2}
+                        subtitle={t.cv_page_certifications_subtitle2}
+                        img={certiprof_new.src}
+                        imgAlt={
+                          'Scrum Foundation Professional Certificate (SFPC)'
+                        }
+                      />
                     </p>
+                  </details>
 
-                    <div className="mb-4 grid grid-cols-3 place-items-center gap-3 rounded-b-xl bg-[#e7eaf7] p-4">
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/v41PgtguSlC57_0CPuXChA'
-                        }
-                        imgSrc={badge01.src}
-                        imgAlt="Containers e Docker"
-                      />
+                  <br />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/6lo8JyZRSnSAbJO_rkvJbw'
-                        }
-                        imgSrc={badge02.src}
-                        imgAlt="Deploy no Kubernetes"
-                      />
+                  <div className="dark:border-white-300 mb-2 border-t-2 border-gray-300 pb-8" />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/Cc0WsvzzSX2C_g0TrZcKAg'
-                        }
-                        imgSrc={badge03.src}
-                        imgAlt="Pipelines CI/CD"
-                      />
+                  <details className="group mb-4 rounded-xl bg-[#ccd2e7] shadow-lg shadow-indigo-500/50 dark:shadow-indigo-500/50">
+                    <summary
+                      className="lg:prose-x1 prose relative flex cursor-pointer list-none flex-wrap items-center
+                     rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-blue-300
+                      group-open:z-[1] group-open:rounded-b-none"
+                    >
+                      <h1 className="lg:prose-x1 prose flex flex-1 select-none rounded-xl bg-[#ccd2e7] p-4">
+                        {t.cv_page_badges_header}
+                      </h1>
+                      <div className="flex-w-10 items-center justify-center">
+                        <div className="ml-2 origin-left border-8 border-transparent border-l-gray-600 transition-transform group-open:rotate-90" />
+                      </div>
+                    </summary>
+                    <div className="rounded-b-xl bg-[#e7eaf7]">
+                      <p className="mb-4 bg-[#e7eaf7] p-4 text-justify">
+                        {t.cv_page_badges_description}
+                      </p>
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/PPvlPo7vQQyysdT_Z2nFHg'
-                        }
-                        imgSrc={badge04.src}
-                        imgAlt="Explorador - Containers e Docker"
-                      />
+                      <div className="mb-4 grid grid-cols-3 place-items-center gap-3 rounded-b-xl bg-[#e7eaf7] p-4">
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/v41PgtguSlC57_0CPuXChA'
+                          }
+                          imgSrc={badge01.src}
+                          imgAlt="Containers e Docker"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/dnjH7Kr2Qw2Tp97oneSXsg'
-                        }
-                        imgSrc={badge05.src}
-                        imgAlt="Desbravador - Deploy no Kubernetes"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/6lo8JyZRSnSAbJO_rkvJbw'
+                          }
+                          imgSrc={badge02.src}
+                          imgAlt="Deploy no Kubernetes"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/L7ZYNG9wTaKmxZ4mbtbi4w'
-                        }
-                        imgSrc={badge06.src}
-                        imgAlt="Reactive Spring"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/Cc0WsvzzSX2C_g0TrZcKAg'
+                          }
+                          imgSrc={badge03.src}
+                          imgAlt="Pipelines CI/CD"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/KYfMApz3TFy2oeg8ErxRGA'
-                        }
-                        imgSrc={badge07.src}
-                        imgAlt="Scrum Foundation Professional Certificate - SFPC"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/PPvlPo7vQQyysdT_Z2nFHg'
+                          }
+                          imgSrc={badge04.src}
+                          imgAlt="Explorador - Containers e Docker"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/zEjvYeCZQRu3mfsn29F8zQ'
-                        }
-                        imgSrc={badge09.src}
-                        imgAlt="Iniciativa DevOps - Docker"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/dnjH7Kr2Qw2Tp97oneSXsg'
+                          }
+                          imgSrc={badge05.src}
+                          imgAlt="Desbravador - Deploy no Kubernetes"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/LR_Z4c1YQS6CWh66fNRVkA'
-                        }
-                        imgSrc={badge10.src}
-                        imgAlt="Iniciativa DevOps - Kubernetes"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/L7ZYNG9wTaKmxZ4mbtbi4w'
+                          }
+                          imgSrc={badge06.src}
+                          imgAlt="Reactive Spring"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/4AaoXeo8QbOm_XXZwWmxJg'
-                        }
-                        imgSrc={badge11.src}
-                        imgAlt="Iniciativa DevOps - Terrafom"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/KYfMApz3TFy2oeg8ErxRGA'
+                          }
+                          imgSrc={badge07.src}
+                          imgAlt="Scrum Foundation Professional Certificate - SFPC"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/hNpWmgL6Roqt3wKGIgH03g'
-                        }
-                        imgSrc={badge12.src}
-                        imgAlt="Iniciativa DevOps - CI/CD"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/zEjvYeCZQRu3mfsn29F8zQ'
+                          }
+                          imgSrc={badge09.src}
+                          imgAlt="Iniciativa DevOps - Docker"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/NqhXCgplQ0ebva0ljFu5wA'
-                        }
-                        imgSrc={badge13.src}
-                        imgAlt="Iniciativa DevOps - Prometheus e Grafana"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/LR_Z4c1YQS6CWh66fNRVkA'
+                          }
+                          imgSrc={badge10.src}
+                          imgAlt="Iniciativa DevOps - Kubernetes"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/hE95nEFgQrCLYpvGZrL0hA'
-                        }
-                        imgSrc={badge14.src}
-                        imgAlt="Jornada DevOps de Elite - Docker"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/4AaoXeo8QbOm_XXZwWmxJg'
+                          }
+                          imgSrc={badge11.src}
+                          imgAlt="Iniciativa DevOps - Terrafom"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/E1Ie3wjBTkmjNSX2FpiL8w'
-                        }
-                        imgSrc={badge15.src}
-                        imgAlt="Jornada DevOps de Elite - Kubernetes"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/hNpWmgL6Roqt3wKGIgH03g'
+                          }
+                          imgSrc={badge12.src}
+                          imgAlt="Iniciativa DevOps - CI/CD"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/fkfqiGc2SlGqMj-akeQwkw'
-                        }
-                        imgSrc={badge16.src}
-                        imgAlt="Jornada DevOps de Elite - Terraform"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/NqhXCgplQ0ebva0ljFu5wA'
+                          }
+                          imgSrc={badge13.src}
+                          imgAlt="Iniciativa DevOps - Prometheus e Grafana"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/-0a9sePyQkOpX5yiH3rWeQ'
-                        }
-                        imgSrc={badge17.src}
-                        imgAlt="Jornada DevOps de Elite - Jenkins - CI/CD"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/hE95nEFgQrCLYpvGZrL0hA'
+                          }
+                          imgSrc={badge14.src}
+                          imgAlt="Jornada DevOps de Elite - Docker"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/XiaMWOdLTbmV_iIFOJeZag'
-                        }
-                        imgSrc={badge18.src}
-                        imgAlt="Jornada DevOps de Elite - Prometheus + Grafana"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/E1Ie3wjBTkmjNSX2FpiL8w'
+                          }
+                          imgSrc={badge15.src}
+                          imgAlt="Jornada DevOps de Elite - Kubernetes"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/q_mtqixUTYiDPnIwgtUk3g'
-                        }
-                        imgSrc={badge08.src}
-                        imgAlt="Certiprof - Lifelong Learning"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/fkfqiGc2SlGqMj-akeQwkw'
+                          }
+                          imgSrc={badge16.src}
+                          imgAlt="Jornada DevOps de Elite - Terraform"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/7oiHlCgbQHavMiDqLOIwBQ'
-                        }
-                        imgSrc={badge19.src}
-                        imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Docker"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/-0a9sePyQkOpX5yiH3rWeQ'
+                          }
+                          imgSrc={badge17.src}
+                          imgAlt="Jornada DevOps de Elite - Jenkins - CI/CD"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/yk4WOaAkRrCqm1B7ti4t2w'
-                        }
-                        imgSrc={badge20.src}
-                        imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Kubernetes"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/XiaMWOdLTbmV_iIFOJeZag'
+                          }
+                          imgSrc={badge18.src}
+                          imgAlt="Jornada DevOps de Elite - Prometheus + Grafana"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/AcrSGqEhR3yPJqc0D2UeYw'
-                        }
-                        imgSrc={badge21.src}
-                        imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Terraform"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/q_mtqixUTYiDPnIwgtUk3g'
+                          }
+                          imgSrc={badge08.src}
+                          imgAlt="Certiprof - Lifelong Learning"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/zYkNY8kKR7GJMg9IfV8Xeg'
-                        }
-                        imgSrc={badge22.src}
-                        imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - CI/CD, Jenkins"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/7oiHlCgbQHavMiDqLOIwBQ'
+                          }
+                          imgSrc={badge19.src}
+                          imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Docker"
+                        />
 
-                      <BadgesCard
-                        cardLink={
-                          'https://api.badgr.io/public/assertions/J4HrxZGyTGWT48vhmghIXg'
-                        }
-                        imgSrc={badge23.src}
-                        imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Prometheus + Grafana"
-                      />
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/yk4WOaAkRrCqm1B7ti4t2w'
+                          }
+                          imgSrc={badge20.src}
+                          imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Kubernetes"
+                        />
+
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/AcrSGqEhR3yPJqc0D2UeYw'
+                          }
+                          imgSrc={badge21.src}
+                          imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Terraform"
+                        />
+
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/zYkNY8kKR7GJMg9IfV8Xeg'
+                          }
+                          imgSrc={badge22.src}
+                          imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - CI/CD, Jenkins"
+                        />
+
+                        <BadgesCard
+                          cardLink={
+                            'https://api.badgr.io/public/assertions/J4HrxZGyTGWT48vhmghIXg'
+                          }
+                          imgSrc={badge23.src}
+                          imgAlt="Jornada DevOps de Elite, Janeiro de 2023 - Prometheus + Grafana"
+                        />
+                      </div>
                     </div>
-                  </div>
-                </details>
+                  </details>
 
-                <br />
+                  <br />
 
-                <div className="dark:border-white-300 mb-2 border-t-2 border-gray-300 pb-8" />
-              </RotateZAnimation>
-            </article>
+                  {/* <div className="dark:border-white-300 mb-2 border-t-2 border-gray-300 pb-8" /> */}
+                </RotateZAnimation>
+              </article>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

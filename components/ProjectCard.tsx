@@ -1,5 +1,3 @@
-import { NextPage } from 'next'
-
 interface ProjectCardProps {
   indicador: string
   image: string

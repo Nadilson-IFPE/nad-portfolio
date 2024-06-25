@@ -1,13 +1,13 @@
 ---
-autor: 'Nadilson José'
-autor_img: '/images/posts/me_myself.jpg'
-autor_email: 'nadilson@protonmail.com'
-capa: '/images/posts/elogio_ebac.png'
-capa_posts_list: '/images/posts/elogio_ebac_posts_list.png'
-data: '06/05/2022'
-titulo: 'Live Compliments (Microservices)'
-resumo: "During the instructor's live correction of a microservices challenge, I didn't expect to be praised."
-video: '/files/me/ebac_avaliacao.mp4'
+post_author: 'Nadilson José'
+post_author_img: '/images/posts/me_myself.png'
+post_author_email: 'nadilson@protonmail.com'
+post_cover: '/images/posts/elogio_ebac.png'
+post_thumbnail: '/images/posts/elogio_ebac_thumbnail.png'
+post_date: '06/05/2022'
+post_title: 'Live Compliments (Microservices)'
+post_summary: "During the instructor's live correction of a microservices challenge, I didn't expect to be praised."
+post_video: '/files/me/ebac_avaliacao.mp4'
 ---
 
 During the free online event on Microservices promoted by **EBAC - Escola Britânica de Artes Criativas e Tecnologia (EBAC - British School of Creative Arts and Technology)**, the instructor **Guilherme Dalleprane** - by the way, owner of an excellent didactics - launched a challenge for those who were honoring the three class days. The next day, he made a live correction of the challenges that were delivered properly resolved. I was surprised when it was my turn. You can watch the video below. You can watch it in full screen.

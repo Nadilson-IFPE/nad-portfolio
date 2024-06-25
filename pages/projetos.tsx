@@ -12,6 +12,7 @@ import {
 
 const Projetos: NextPage = () => {
   const t = useLanguages()
+
   return (
     <>
       <Head>
@@ -21,7 +22,7 @@ const Projetos: NextPage = () => {
 
       <div className="mx-auto flex justify-center space-y-14 px-4 pt-5 lg:space-y-24">
         <div className="item-center mx-auto flex lg:-mx-4 lg:flex lg:flex-row lg:space-x-5 lg:text-left">
-          <div className="shadow-indigo-500/50 lg:mt-12 lg:px-4">
+          <div className="shadow-indigo-500/50 lg:mt-2 lg:px-4">
             <RotateZAnimation>
               <h1 className="text-center text-2xl font-bold text-gray-900 underline decoration-sky-300 decoration-wavy underline-offset-8 dark:text-white lg:text-4xl">
                 {t.projects_page_header}

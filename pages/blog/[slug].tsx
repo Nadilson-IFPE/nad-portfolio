@@ -18,14 +18,17 @@ type GetStaticPathsContext = {
 
 const PostPage: NextPage<Post> = ({
   frontmatter: {
-    titulo,
-    resumo,
-    data,
-    capa,
-    capa_posts_list,
-    autor,
-    autor_img,
-    video,
+    post_author,
+    post_author_img,
+    post_author_email,
+    post_cover,
+    post_thumbnail,
+    post_date,
+    post_title,
+    post_title_english,
+    post_sumary,
+    post_sumary_english,
+    post_video,
   },
   slug,
   content,
@@ -33,13 +36,14 @@ const PostPage: NextPage<Post> = ({
   const t = useLanguages()
   const { locale } = useRouter()
 
-  return titulo !== '' ? (
+
+  return post_title !== '' ? (
     <>
       <div className="mx-auto justify-center space-y-14 px-4 pt-5 lg:space-y-24">
         <Head>
           <title>
             {t.blog_article_page_title}
-            {titulo}
+            {post_title}
           </title>
         </Head>
 
@@ -75,27 +79,27 @@ const PostPage: NextPage<Post> = ({
             </div>
 
             <h1 className="p-4 pt-6 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-black">
-              {titulo}
+              {post_title}
             </h1>
             <div className="flex aspect-auto items-center justify-center">
               <img
                 className="mt-2 mb-2 aspect-auto h-auto max-w-full object-cover lg:mb-2"
-                src={capa}
-                alt={titulo}
+                src={post_cover}
+                alt={post_title}
               />
             </div>
             <div className="bg-[#f4f4f4] px-4 dark:bg-slate-200 dark:text-black">
               <div>
                 <strong>{t.blogcard_post_date}</strong>
-                {data}
+                {post_date}
               </div>
               <div>
                 <strong>{t.blogcard_author_name}</strong>
-                {autor}
+                {post_author}
               </div>
             </div>
 
-            <div className="blog_post-body h-auto max-w-full rounded-xl p-4 text-justify dark:bg-[#e7eaf7]">
+            <div className="h-auto max-w-full rounded-xl p-4 text-justify dark:bg-[#e7eaf7]">
               <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
             </div>
           </article>

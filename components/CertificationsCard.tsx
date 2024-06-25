@@ -1,8 +1,4 @@
-import { NextPage } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { StringLiteral } from 'typescript'
 import { useLanguages } from '../hooks/useLanguages'
 
 interface CertificationsCardProps {

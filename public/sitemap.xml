@@ -3,98 +3,112 @@
         
               <url>
                 <loc>https://nadportfolio.vercel.app/blog</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
             
               <url>
                 <loc>https://nadportfolio.vercel.app/contatos</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
             
               <url>
                 <loc>https://nadportfolio.vercel.app/cv</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
             
               <url>
                 <loc>https://nadportfolio.vercel.app/projetos</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
+            
+              <url>
+                <loc>https://nadportfolio.vercel.app/underconstruction</loc>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>			  
 			  
 			  <url>
                 <loc>https://nadportfolio.vercel.app/en/blog</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
             
               <url>
                 <loc>https://nadportfolio.vercel.app/en/contatos</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
             
               <url>
                 <loc>https://nadportfolio.vercel.app/en/cv</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
             
               <url>
                 <loc>https://nadportfolio.vercel.app/en/projetos</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>
+            
+              <url>
+                <loc>https://nadportfolio.vercel.app/en/underconstruction</loc>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
             
               <url>
                 <loc>https://nadportfolio.vercel.app/blog/avaliacao-e-elogios-ao-vivo</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
-                <changefreq>monthly</changefreq>
-                <priority>1.0</priority>
-              </url>
-            
-              <url>
-                <loc>https://nadportfolio.vercel.app/blog/internacionalizacao-com-next-js</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
             
               <url>
                 <loc>https://nadportfolio.vercel.app/blog/novos-badges-conquistados</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>
+            
+              <url>
+                <loc>https://nadportfolio.vercel.app/blog/seguidores-no-github</loc>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
 			  
 			  <url>
                 <loc>https://nadportfolio.vercel.app/en/blog/avaliacao-e-elogios-ao-vivo</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
-                <changefreq>monthly</changefreq>
-                <priority>1.0</priority>
-              </url>
-            
-              <url>
-                <loc>https://nadportfolio.vercel.app/en/blog/internacionalizacao-com-next-js</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>
             
               <url>
                 <loc>https://nadportfolio.vercel.app/en/blog/novos-badges-conquistados</loc>
-                <lastmod>2023-02-15T01:07:14.092Z</lastmod>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+              </url>
+            
+              <url>
+                <loc>https://nadportfolio.vercel.app/en/blog/seguidores-no-github</loc>
+                <lastmod>2024-06-25T02:32:35.615Z</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
               </url>

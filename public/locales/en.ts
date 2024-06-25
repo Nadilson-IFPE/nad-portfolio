@@ -72,16 +72,11 @@ export default {
   <br />
   • Java Server Pages (JSP), Java Server Faces (JSF);
   <br />
-  • HTML, CSS (includes Tailwind CSS and others) and JavaScript;
-  <br />
-  • Typescript, React, React Native, Angular, Node.js, Ionic, NextJS, VueJS and 
-  Flutter;
+  • Typescript, React, React Native, Angular, Node, Ionic, Next.js, Tailwind CSS and Flutter;
   <br />
   • Spring Boot, JWT, Hibernate, Rest;
   <br />
   • MySQL, MongoDB, FireBase, Postgres;
-  <br />
-  • Drupal and Magento;
   <br />
   • Microservices;
   <br />
@@ -220,9 +215,9 @@ export default {
 
   contact_page_title: "Nadilson J. R. Teixeira's personal website - Contact",
   contact_page_header: 'Contact',
-  contact_page_desc1: 'Historian',
-  contact_page_desc2: 'Software Developer',
-  contact_page_desc3: 'Analyst',
+  contact_page_desc1: 'Software Developer',
+  contact_page_desc2: 'Analyst',
+  contact_page_desc3: 'Historian',
   contact_page_phone: 'Phone Number:',
   contact_page_email: 'E-mail address:',
   contact_page_findme: 'Find me at:',

@@ -61,11 +61,12 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
 
       <div className="mx-auto flex justify-center space-y-14 px-4 pt-5 lg:space-y-24">
         <div className="item-center mx-auto flex flex-col-reverse lg:-mx-4 lg:flex lg:flex-row lg:space-x-5 lg:text-left">
-          <div className="shadow-indigo-500/50 lg:mt-6 lg:px-4">
+          <div className="shadow-indigo-500/50 lg:mt-2 lg:px-4">
             <BottomToTopAnimation>
               <h1 className="text-center text-2xl font-bold text-gray-900 underline decoration-sky-300 decoration-wavy underline-offset-8 dark:text-white lg:text-4xl">
                 {t.blog_page_header}
               </h1>
+
               <br />
             </BottomToTopAnimation>
 
@@ -74,20 +75,20 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                 {posts.map((post, idx) => {
                   return (
                     <BlogCard
-                      key={Math.random()}
+                      key={idx}
                       cardIndex={idx}
                       cardNumber={precedaComZero(posts.length - idx)}
-                      cardImage={`${post.frontmatter.capa_posts_list}`}
-                      cardImageAlt={post.frontmatter.titulo}
-                      postDate={post.frontmatter.data}
-                      author={post.frontmatter.autor}
-                      authorImage={post.frontmatter.autor_img}
-                      authorEmail={post.frontmatter.autor_email}
-                      title={post.frontmatter.titulo}
-                      description={post.frontmatter.resumo}
+                      cardImage={`${post.frontmatter.post_thumbnail}`}
+                      cardImageAlt={post.frontmatter.post_title}
+                      postDate={post.frontmatter.post_date}
+                      author={post.frontmatter.post_author}
+                      authorImage={post.frontmatter.post_author_img}
+                      authorEmail={post.frontmatter.post_author_email}
+                      title={post.frontmatter.post_title}
+                      description={post.frontmatter.post_summary}
                       btnLink={`/blog/${encodeURIComponent(post.slug)}`}
                       btnText={t.blogcard_button_caption}
-                      post_reading_time={estimatedReadingTime(post.content, locale)}
+                      postReadingTime={estimatedReadingTime(post.content, locale)}
                     />
                   )
                 })}
@@ -134,10 +135,10 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
           post1: { frontmatter: { data: string | number | Date } },
           post2: { frontmatter: { data: string | number | Date } }
         ) =>
-          new Date(post1.frontmatter.data).toLocaleDateString('pt-BR') >
+          new Date(post1.frontmatter.data).toLocaleDateString('pt-BR') <
             new Date(post2.frontmatter.data).toLocaleDateString('pt-BR')
-            ? -1
-            : 1
+            ? 1
+            : -1
       ),
     },
   }
