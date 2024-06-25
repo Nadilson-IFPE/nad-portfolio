@@ -31,7 +31,7 @@ const UnderConstruction: NextPage = () => {
             />
           </svg> */}
           <TopToBottomAnimation>
-            <Image src={under_construction} height={150} width={150} />
+            <Image src={under_construction} height={150} width={150} alt='' />
           </TopToBottomAnimation>
         </div>
         <RightToLeftAnimation>

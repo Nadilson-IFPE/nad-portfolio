@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/inline-script-id */
 import Head from 'next/head'
 import SEO from '../next-seo.config'
 import '../styles/globals.css'

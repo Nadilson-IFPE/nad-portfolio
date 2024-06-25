@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Head from 'next/head'
-import { GetStaticProps, NextPage } from 'next'
+import { NextPage } from 'next'
 import Link from 'next/link'
 import FavIcon from '../components/FavIcon'
 import { useLanguages } from '../hooks/useLanguages'

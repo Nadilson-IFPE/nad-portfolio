@@ -140,6 +140,7 @@ const MobileNavigation = () => {
                 height="30"
                 width="30"
                 objectFit="contain"
+                alt=''
               />
               <Link href="/" passHref scroll={false}>
                 <a
@@ -166,6 +167,7 @@ const MobileNavigation = () => {
                 height="30"
                 width="30"
                 objectFit="contain"
+                alt=''
               />
               <Link href="/cv" passHref>
                 <a
@@ -192,6 +194,7 @@ const MobileNavigation = () => {
                 height="30"
                 width="30"
                 objectFit="contain"
+                alt=''
               />
               <Link href="/projetos" passHref>
                 <a
@@ -218,6 +221,7 @@ const MobileNavigation = () => {
                 height="30"
                 width="30"
                 objectFit="contain"
+                alt=''
               />
               <Link href="/contatos" passHref>
                 <a
@@ -244,6 +248,7 @@ const MobileNavigation = () => {
                 height="30"
                 width="30"
                 objectFit="contain"
+                alt=''
               />
               <Link href="/blog" passHref>
                 <a

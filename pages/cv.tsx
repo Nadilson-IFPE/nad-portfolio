@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import Head from 'next/head'
 import React from 'react'
 import badge01 from '../public/images/badges/badge01.png'
@@ -45,7 +46,7 @@ async function downloadCV() {
   const meuCVBlob = await meuCV.blob()
   const meuCVBlobURL = URL.createObjectURL(meuCVBlob)
 
-  var anchor = document.createElement('a')
+  let anchor = document.createElement('a')
   anchor.style.display = 'none'
   anchor.href = meuCVBlobURL
   anchor.rel = 'noopener, noreferrer'
@@ -75,7 +76,7 @@ async function downloadCVInEnglish() {
   const meuCVBlob = await meuCV.blob()
   const meuCVBlobURL = URL.createObjectURL(meuCVBlob)
 
-  var anchor = document.createElement('a')
+  let anchor = document.createElement('a')
   anchor.style.display = 'none'
   anchor.href = meuCVBlobURL
   anchor.rel = 'noopener, noreferrer'

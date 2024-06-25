@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { useLanguages } from '../hooks/useLanguages'
 
 interface CertificationsCardProps {
   title: string
@@ -14,7 +13,6 @@ const CertificationsCard = ({
   img,
   imgAlt,
 }: CertificationsCardProps) => {
-  const t = useLanguages()
 
   return (
     <>

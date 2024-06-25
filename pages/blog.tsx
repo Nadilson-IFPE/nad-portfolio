@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Head from 'next/head'
 import React from 'react'
 import fs from 'fs'
@@ -23,8 +24,8 @@ const sortByDate = (
   a: { frontmatter: { data: string | number | Date } },
   b: { frontmatter: { data: string | number | Date } }
 ) => {
-  var data1 = new Date(a.frontmatter.data).toLocaleDateString('pt-BR')
-  var data2 = new Date(b.frontmatter.data).toLocaleDateString('pt-BR')
+  const data1 = new Date(a.frontmatter.data).toLocaleDateString('pt-BR')
+  const data2 = new Date(b.frontmatter.data).toLocaleDateString('pt-BR')
   if (data1 < data2) {
     return 1
   } else if (data1 > data2) {

@@ -9,7 +9,6 @@ interface Props {
 const DetailsSection: NextPage<Props> = ({
   title,
   text,
-  additionalItems,
 }): JSX.Element => {
   return (
     <>

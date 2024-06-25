@@ -3,7 +3,6 @@ import type { NextPage } from 'next'
 import About from '../components/About'
 import FavIcon from '../components/FavIcon'
 import { useLanguages } from './../hooks/useLanguages'
-import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
   const t = useLanguages()

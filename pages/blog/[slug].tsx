@@ -19,16 +19,10 @@ type GetStaticPathsContext = {
 const PostPage: NextPage<Post> = ({
   frontmatter: {
     post_author,
-    post_author_img,
-    post_author_email,
     post_cover,
-    post_thumbnail,
     post_date,
     post_title,
-    post_summary,
-    post_video,
   },
-  slug,
   content,
 }: Post) => {
   const t = useLanguages()
