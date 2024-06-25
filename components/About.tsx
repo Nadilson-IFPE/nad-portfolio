@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import profile from '../public/images/profile.png'
 import linkedin from '../public/images/linkedin.png'
 import github from '../public/images/github.png'
 import playstore from '../public/images/playstore.png'
@@ -10,20 +9,9 @@ import whatsapp from '../public/images/whatsapp.png'
 import Link from 'next/link'
 import { useLanguages } from '../hooks/useLanguages'
 import { RotateZAnimation, ShowTextAnimation } from './Animations'
-import { useRouter } from 'next/router'
-
 
 const About = () => {
   const t = useLanguages()
-
-  const { asPath } = useRouter()
-  const pageName = asPath.slice(asPath.indexOf('/') + 1)
-
-  useEffect(() => {
-    fetch(`/api/pageviews/${pageName}`, {
-      method: "POST",
-    });
-  }, [pageName]);
 
   return (
     <div className="mx-auto px-4">
