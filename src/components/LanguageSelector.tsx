@@ -2,8 +2,8 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useCookies } from 'react-cookie'
-import br_flag from '../public/images/br.svg'
-import gb_flag from '../public/images/gb.svg'
+import br_flag from '/public/images/br.svg'
+import gb_flag from '/public/images/gb.svg'
 
 export default function LanguageSelector() {
   const router = useRouter()
@@ -25,7 +25,7 @@ export default function LanguageSelector() {
     if (userAcceptedCookieConsentCookie.NEXT_COOKIE_CONSENT) {
       setWebSiteLanguageCookie(lang)
     } else {
-      //  console.log('Usuário não aceitou CookieConsent!')
+        console.log('Usuário não aceitou CookieConsent!')
     }
   }
 
@@ -44,7 +44,7 @@ export default function LanguageSelector() {
   }
 
   return (
-    <button
+    <button name='change_app_language' aria-label='Change app language'
       type="button"
       className="h-8 w-8 rounded p-1 sm:ml-4"
       onClick={() => {

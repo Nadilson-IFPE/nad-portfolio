@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import ThemeSwitch from './ThemeSwitch'
 import Image from 'next/image'
-import nav_icon from '../public/images/nav_icon.png'
+import nav_icon from '/public/images/nav_icon.png'
 import MobileNavigation from './MobileNavigation'
 import LanguageSelector from './LanguageSelector'
 import ThreeDotsDivider from './ThreeDotsDivider'
@@ -22,27 +22,27 @@ const Navigation = () => {
     myDiv: string,
     page: string
   ) => {
-    let targetDiv = document.getElementById(myDiv);
-    let targetParagraph = document.getElementById('paragraph');
+    let targetDiv = document.getElementById(myDiv) as HTMLElement;
+    let targetParagraph = document.getElementById('paragraph') as HTMLElement;
 
     if (path === window.location.href) {
       e.preventDefault();
       window.scroll(0, 0);
-      targetParagraph!.innerHTML = 
+      targetParagraph.innerHTML = 
         `${t.nav_dynamic_error_message}` + '<strong>' + page + '</strong>!';
-      targetDiv!.setAttribute(
+      targetDiv.setAttribute(
         'class',
         '.1s block w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out md:-translate-x-0'
       )
       setTimeout(function () {
-        targetDiv!.setAttribute(
+        targetDiv.setAttribute(
           'class',
           '-translate-x-full w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out'
         )
       }, 2500)
     } else {
       window.scroll(0, 0)
-      targetDiv!.setAttribute(
+      targetDiv.setAttribute(
         'class',
         '-translate-x-full w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out'
       )

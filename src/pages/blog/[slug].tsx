@@ -111,7 +111,7 @@ const PostPage: NextPage<Post> = ({
 export default PostPage
 
 export async function getStaticPaths({ locales }: GetStaticPathsContext) {
-  const files = fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join('src/posts'))
 
   /* const paths = files.map((fileName) => ({
     params: {
@@ -144,7 +144,7 @@ export async function getStaticProps({
   params: { slug: string }
 }) {
   const markeddownWithMeta = fs.readFileSync(
-    path.join('posts/' + slug + `/${locale}.md`),
+    path.join('src/posts/' + slug + `/${locale}.md`),
     'utf-8'
   )
 

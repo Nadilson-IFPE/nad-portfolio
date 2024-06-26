@@ -8,7 +8,7 @@ const ThemeSwitch = () => {
   useEffect(() => setMounted(true), [])
 
   return (
-    <button
+    <button name='theme_switch_button'
       aria-label="Altera o modo de exibição para claro ou escuro"
       type="button"
       className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"
@@ -18,7 +18,7 @@ const ThemeSwitch = () => {
         )
       }
     >
-      <svg
+      <svg name='theme_switch_button'
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"

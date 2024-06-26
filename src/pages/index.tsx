@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import type { NextPage } from 'next'
-import About from '../components/About'
-import FavIcon from '../components/FavIcon'
-import { useLanguages } from './../hooks/useLanguages'
+import About from '@/components/About'
+import FavIcon from '@/components/FavIcon'
+import { useLanguages } from '@/hooks/useLanguages'
 
 const Home: NextPage = () => {
   const t = useLanguages()

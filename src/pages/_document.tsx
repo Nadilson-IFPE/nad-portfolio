@@ -5,7 +5,8 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document'
-import FavIcon from './../components/FavIcon'
+import FavIcon from '@/components/FavIcon'
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -23,6 +24,7 @@ class MyDocument extends Document {
           <FavIcon />
         </Head>
         <body>
+          <SpeedInsights />
           <Main />
           <NextScript />
         </body>

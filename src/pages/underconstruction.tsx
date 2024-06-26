@@ -6,9 +6,9 @@ import {
   LeftToRightAnimation,
   RightToLeftAnimation,
   TopToBottomAnimation,
-} from '../components/Animations'
-import { useLanguages } from '../hooks/useLanguages'
-import under_construction from '../public/images/under-construction.svg'
+} from '@/components/Animations'
+import { useLanguages } from '@/hooks/useLanguages'
+import under_construction from '/public/images/under-construction.svg'
 
 const UnderConstruction: NextPage = () => {
   const t = useLanguages()

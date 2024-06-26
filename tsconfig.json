@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": "./",
     "allowJs": true,
     "checkJs": true,
     "skipLibCheck": true,
@@ -16,8 +17,14 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "paths": {
+      "@/*": ["./src/*"],      
+      "@files/*": ["./public/files/*"],
+      "@images/*": ["./public/images/*"],
+      "@locales/*": ["./public/locales/*"]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/middleware.ts"],
   "exclude": ["node_modules"]
 }

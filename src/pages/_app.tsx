@@ -1,18 +1,18 @@
 /* eslint-disable @next/next/inline-script-id */
 import Head from 'next/head'
-import SEO from '../next-seo.config'
-import '../styles/globals.css'
-import '../styles/photo.animations.css'
+import SEO from '../../next-seo.config'
+import '@/styles/globals.css'
+import '@/styles/photo.animations.css'
 import type { AppProps } from 'next/app'
 import 'tailwindcss/tailwind.css'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 import { ThemeProvider } from 'next-themes'
 import { AnimatePresence, motion } from 'framer-motion'
 import { DefaultSeo } from 'next-seo'
-import FavIcon from './../components/FavIcon'
+import FavIcon from '@/components/FavIcon'
 import Script from 'next/script'
-import { useLanguages } from './../hooks/useLanguages'
+import { useLanguages } from '@/hooks/useLanguages'
 import { Analytics } from '@vercel/analytics/react'
 import CookieConsent from 'react-cookie-consent'
 import { CookiesProvider } from 'react-cookie'
@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <FavIcon />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
         />
 
         {/* Google / Search Engine Tags */}

@@ -1,7 +1,7 @@
 /* Source: https://www.youtube.com/watch?v=2FiRnukg8eg */
 
 .image-content {
-    background: url('../public/images/profile.png');
+    background: url('../../public/images/profile.png');
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;

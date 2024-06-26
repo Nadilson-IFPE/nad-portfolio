@@ -32,7 +32,7 @@ const BadgesCard = ({ cardLink, imgSrc, imgAlt }: BadgesCardProps) => {
           />
 
           <div className="flex justify-center">
-            <button
+            <button name={t.cv_page_badges_button_caption} aria-label={t.cv_page_badges_button_caption}
               className="rounded-full bg-blue-500 p-2 text-white no-underline shadow-lg hover:bg-blue-700 hover:shadow-lg"
               onClick={() => {
                 // window.open(cardLink, '_blank', 'noopener,noreferrer')

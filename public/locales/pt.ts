@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   nav_home: 'INÍCIO',
   nav_cv: 'CV',
@@ -242,6 +243,11 @@ export default {
   blog_page_update_info: `Foi mal, mas os artigos do Blog estão sendo adaptados para a língua inglesa.
   <br />Em breve, ele retornará.`,
   blog_article_page_title: 'Site pessoal de Nadilson J. R. Teixeira - Blog: ',
+
+  my_401_error_page_title: `Nadilson J. R. Teixeira's personal website - Erro 401 no Endpoint`,
+  my_401_error_page_error_code: 'Erro 401',
+  my_401_error_page_error_description: 'Não é possível acessar diretamente este endpoint.',
+  my_401_error_page_go_back_link: 'Voltar à página inicial',
 
   my_404_error_page_title:
     'Site pessoal de Nadilson J. R. Teixeira - Página não encontrada',

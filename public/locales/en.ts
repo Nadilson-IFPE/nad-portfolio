@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   nav_home: 'HOME',
   nav_cv: 'CV',
@@ -239,12 +240,17 @@ export default {
   blog_page_update_info: `Sorry, but the articles on the Blog are being adapted to
   the English language.<br />Soon, it will return.`,
 
+  my_401_error_page_title: `Nadilson J. R. Teixeira's personal website - Endpoint's 401 Error`,
+  my_401_error_page_error_code: 'Error 401',
+  my_401_error_page_error_description: 'Cannot directly access this endpoint.',
+  my_401_error_page_go_back_link: 'Go back to home page',
+
   my_404_error_page_title: `Nadilson J. R. Teixeira's personal website - Page not found`,
   my_404_error_page_error_code: 'Error 404',
   my_404_error_page_error_description: 'The page does not exist!',
   my_404_error_page_go_back_link: 'Go back to home page',
 
-  my_500_error_page_title: `Nadilson J. R. Teixeira's personal website - Erro de servidor`,
+  my_500_error_page_title: `Nadilson J. R. Teixeira's personal website - Server error`,
   my_500_error_page_error_code: 'Error 500',
   my_500_error_page_error_description: 'Server error!',
   my_500_error_page_go_back_link: 'Go back to home page',

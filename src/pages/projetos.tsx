@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import React from 'react'
 import { NextPage } from 'next'
-import FavIcon from '../components/FavIcon'
-import ProjectCard from '../components/ProjectCard'
-import { useLanguages } from '../hooks/useLanguages'
+import FavIcon from '@/components/FavIcon'
+import ProjectCard from '@/components/ProjectCard'
+import { useLanguages } from '@/hooks/useLanguages'
 import {
   LeftToRightAnimation,
   RightToLeftAnimation,
   RotateZAnimation,
-} from '../components/Animations'
+} from '@/components/Animations'
 
 const Projetos: NextPage = () => {
   const t = useLanguages()

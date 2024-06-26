@@ -2,13 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRef, useState } from 'react'
 import UseOnClickOutside from '../hooks/useOnClickOutside'
-import nav_icon from '../public/images/nav_icon.png'
+import nav_icon from '/public/images/nav_icon.png'
 import { useLanguages } from '../hooks/useLanguages'
-import home from '../public/images/home.svg'
-import cv from '../public/images/cv.svg'
-import projects from '../public/images/projects.svg'
-import contactme from '../public/images/contact-me.svg'
-import blog from '../public/images/blog.svg'
+import home from '/public/images/home.svg'
+import cv from '/public/images/cv.svg'
+import projects from '/public/images/projects.svg'
+import contactme from '/public/images/contact-me.svg'
+import blog from '/public/images/blog.svg'
 
 const MobileNavigation = () => {
   const [showSidebarMenu, setShowSidebarMenu] = useState(false)
@@ -24,27 +24,27 @@ const MobileNavigation = () => {
     myDiv: string,
     page: string
   ) => {
-    let targetDiv = document.getElementById(myDiv)
-    let targetParagraph = document.getElementById('paragraph')
+    let targetDiv = document.getElementById(myDiv) as HTMLElement;
+    let targetParagraph = document.getElementById('paragraph') as HTMLElement;
 
     if (path === window.location.href) {
       e.preventDefault()
       window.scroll(0, 0)
-      targetParagraph!.innerHTML =
+      targetParagraph.innerHTML =
         `${t.nav_dynamic_error_message}` + '<strong>' + page + '</strong>!'
-      targetDiv!.setAttribute(
+      targetDiv.setAttribute(
         'class',
         '.1s block w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out md:-translate-x-0'
       )
       setTimeout(function () {
-        targetDiv!.setAttribute(
+        targetDiv.setAttribute(
           'class',
           '-translate-x-full w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out'
         )
       }, 2500)
     } else {
       window.scroll(0, 0)
-      targetDiv!.setAttribute(
+      targetDiv.setAttribute(
         'class',
         '-translate-x-full w-full content-center items-center bg-red-800 py-2 px-2 text-center text-white transition-transform duration-300 ease-in-out'
       )
@@ -61,8 +61,8 @@ const MobileNavigation = () => {
     <>
       {/* Botão hamburguer para o menu para dispositivos móveis */}
       <div className="top-0 left-0 flex flex-col space-y-2 rounded p-4 shadow dark:bg-slate-900 sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden">
-        <button className="block" onClick={handleClick}>
-          <svg
+        <button name='mobile_button' aria-label='mobile_button' className="block" onClick={handleClick}>
+          <svg name='mobile_button'
             className="h-6 w-6 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -96,8 +96,8 @@ const MobileNavigation = () => {
         }`}
       >
         <div className="right-0 top-0">
-          <button className="float-right py-0">
-            <svg
+          <button name='mobile_menu_button' aria-label='mobile_menu_button' className="float-right py-0">
+            <svg name='mobile_menu_button'
               className="h-8 w-8 cursor-pointer text-[#39393a] hover:text-[#7d8ac0] dark:text-[#7d8ac0] dark:hover:text-[#6c6c6e]"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -140,7 +140,7 @@ const MobileNavigation = () => {
                 height="30"
                 width="30"
                 objectFit="contain"
-                alt=''
+                alt='Home'
               />
               <Link href="/" passHref scroll={false}>
                 <a
@@ -167,7 +167,7 @@ const MobileNavigation = () => {
                 height="30"
                 width="30"
                 objectFit="contain"
-                alt=''
+                alt='Curriculum Vitæ'
               />
               <Link href="/cv" passHref>
                 <a
@@ -194,7 +194,7 @@ const MobileNavigation = () => {
                 height="30"
                 width="30"
                 objectFit="contain"
-                alt=''
+                alt='Projects'
               />
               <Link href="/projetos" passHref>
                 <a
@@ -221,7 +221,7 @@ const MobileNavigation = () => {
                 height="30"
                 width="30"
                 objectFit="contain"
-                alt=''
+                alt='Contact me'
               />
               <Link href="/contatos" passHref>
                 <a
@@ -248,7 +248,7 @@ const MobileNavigation = () => {
                 height="30"
                 width="30"
                 objectFit="contain"
-                alt=''
+                alt="Nadilson's blog"
               />
               <Link href="/blog" passHref>
                 <a

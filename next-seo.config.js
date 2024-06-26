@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   // https://www.npmjs.com/package/next-seo#title-template
   title: 'Site pessoal e portfólio',

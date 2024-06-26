@@ -2,16 +2,16 @@
 import Head from 'next/head'
 import { NextPage } from 'next'
 import Link from 'next/link'
-import FavIcon from '../components/FavIcon'
-import { useLanguages } from '../hooks/useLanguages'
+import FavIcon from '@/components/FavIcon'
+import { useLanguages } from '@/hooks/useLanguages'
 
-const my404ErrorPage: NextPage = () => {
+const my500ErrorPage: NextPage = () => {
   const t = useLanguages()
 
   return (
     <>
       <Head>
-        <title>{t.my_404_error_page_title}</title>
+        <title>{t.my_500_error_page_title}</title>
         <FavIcon />
       </Head>
 
@@ -21,15 +21,15 @@ const my404ErrorPage: NextPage = () => {
           <img
             alt="Where is my page?"
             className="content-center items-center justify-center"
-            src="/images/confused_travolta.gif"
+            src="/images/bill_nye.gif"
             width={300}
-            height={291}
+            height={300}
           />
           <div className="mt-2 inline-block pr-4 font-bold text-red-600 dark:text-blue-300">
-            {t.my_404_error_page_error_code}
+            {t.my_500_error_page_error_code}
           </div>
           <div className="mt-2 inline-block border-l-[1px] border-l-gray-500 pl-4 text-sm text-red-600 dark:text-blue-300">
-            {t.my_404_error_page_error_description}
+            {t.my_500_error_page_error_description}
           </div>
 
           <div className="mx-auto pt-10">
@@ -39,7 +39,7 @@ const my404ErrorPage: NextPage = () => {
                   'text-sm font-bold tracking-wider transition-colors hover:text-blue-500 dark:text-white dark:hover:text-blue-400'
                 }
               >
-                <p>{t.my_404_error_page_go_back_link}</p>
+                <p>{t.my_500_error_page_go_back_link}</p>
               </a>
             </Link>
           </div>
@@ -49,14 +49,4 @@ const my404ErrorPage: NextPage = () => {
   )
 }
 
-// Esta é uma solução para quem não quiser exibir mensagem, mas redirecionar automaticamente para a página inicial.
-/* export const getStaticProps: GetStaticProps = async () => {
-  return {
-    redirect: {
-      destination: '/',
-      permanent: true,
-    },
-  }
-} */
-
-export default my404ErrorPage
+export default my500ErrorPage

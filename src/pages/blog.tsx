@@ -4,17 +4,17 @@ import React from 'react'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Post from '../models/post'
+import Post from '@/models/post'
 import { GetStaticPropsContext, NextPage } from 'next'
-import FavIcon from '../components/FavIcon'
-import BlogCard from '../components/BlogCard'
-import { useLanguages } from '../hooks/useLanguages'
+import FavIcon from '@/components/FavIcon'
+import BlogCard from '@/components/BlogCard'
+import { useLanguages } from '@/hooks/useLanguages'
 import {
   BottomToTopAnimation,
   TopToBottomAnimation,
-} from '../components/Animations'
+} from '@/components/Animations'
 import { useRouter } from 'next/router'
-import timeToReadText from '../helpers/timeToReadText'
+import timeToReadText from '@/helpers/timeToReadText'
 
 type BlogProps = {
   posts: Array<Post>
@@ -104,7 +104,7 @@ const Blog: NextPage<BlogProps> = ({ posts }: BlogProps) => {
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   // Obtém os arquivos do diretório "posts"
-  const files = fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join('src/posts'))
 
   // Obtém o slug e o frontmatter do diretório "posts"
   const postsData = files.map((fileName) => {
@@ -114,7 +114,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     // Obtém o frontmatter (assunto ou conteúdo dos arquivos ".md" para transformar em
     // em texto humanamente legível no formato HTML)
     const markdownWithMeta = fs.readFileSync(
-      path.join('posts/' + fileName + `/${locale}.md`),
+      path.join('src/posts/' + fileName + `/${locale}.md`),
       'utf-8'
     )
 
