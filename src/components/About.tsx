@@ -110,7 +110,7 @@ const About = () => {
                 </Link>
 
                 <Link
-                  href="https://play.google.com/store/apps/developer?id=Nadilson+J.+R.+Teixeira"
+                  href="https://play.google.com/store/apps/dev?id=4807995731191323169"
                   passHref
                 >
                   <a

@@ -10,7 +10,7 @@ post_summary: 'Conquistei 5 badges ao entregar os desafios de um treinamento onl
 post_video: ''
 ---
 
-Há alguns dias, estive acompanhando o envento [Iniciativa DevOps](https://iniciativadevops.com.br/), promovido pela KubeDev e ministrado pelo [Fabricio Veronez](https://www.linkedin.com/in/fabricioveronez), da [Formação DevOps Pro](https://www.linkedin.com/company/devopspro/). O evento, segundo a própria descrição no site oficial, se tratou de "uma imersão de conteúdo com o intuito de mostrar ao desenvolvedor um método prático para se destacar no mercado como especialista em DevOps e conquistar um dos perfis mais desejados e bem remunerados". Nada mais verdadeiro. Atualmente, DevOps está em alta e não falta emprego.
+Há alguns dias, estive acompanhando o evento [Iniciativa DevOps](https://iniciativadevops.com.br/), promovido pela KubeDev e ministrado pelo [Fabricio Veronez](https://www.linkedin.com/in/fabricioveronez), da [Formação DevOps Pro](https://www.linkedin.com/company/devopspro/). O evento, segundo a própria descrição no site oficial, se tratou de "uma imersão de conteúdo com o intuito de mostrar ao desenvolvedor um método prático para se destacar no mercado como especialista em DevOps e conquistar um dos perfis mais desejados e bem remunerados". Nada mais verdadeiro. Atualmente, DevOps está em alta e não falta emprego.
 
 **O que foi apresentado e ensinado no evento:**
 
